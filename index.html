@@ -602,7 +602,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="qSearch" placeholder="Caută cod sau cuvânt cheie… (ex: putere, frecvență, QRZ)">
+    <input type="text" id="qSearch" aria-label="Caută coduri Q" placeholder="Caută cod sau cuvânt cheie… (ex: putere, frecvență, QRZ)">
     <span class="count-pill" id="qCount"></span>
   </div>
   <div class="qlist" id="qList"><!-- populated by JS --></div>
@@ -611,7 +611,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:13.5px;color:var(--ink-dim);">Argou de telegrafie, la fel de vechi ca hobby-ul — multe supraviețuiesc azi și pe SSB sau FT8.</p>
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="abbrSearch" placeholder="Caută o abreviere… (ex: 73, XYL, HI)">
+    <input type="text" id="abbrSearch" aria-label="Caută abrevieri" placeholder="Caută o abreviere… (ex: 73, XYL, HI)">
     <span class="count-pill" id="abbrCount"></span>
   </div>
   <div class="qlist" id="abbrList"></div>
@@ -646,7 +646,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
         <tr><td class="k">AR</td><td class="mono">·−·−·</td><td>sfârșitul mesajului (echivalent „over”, transmis lipit)</td></tr>
         <tr><td class="k">SK</td><td class="mono">···−·−</td><td>sfârșitul legăturii — și, informal, „Silent Key”: un radioamator decedat</td></tr>
         <tr><td class="k">BT</td><td class="mono">−···−</td><td>separator / paragraf nou (adesea scris „=”)</td></tr>
-        <tr><td class="k">KN</td><td class="mono">−·−·−</td><td>revino tu, exclusiv — nu preiau alte stații</td></tr>
+        <tr><td class="k">KN</td><td class="mono">−·−−·</td><td>revino tu, exclusiv — nu preiau alte stații</td></tr>
         <tr><td class="k">AS</td><td class="mono">·−···</td><td>așteaptă (stand by)</td></tr>
       </tbody>
     </table>
@@ -1091,7 +1091,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:12.5px;color:var(--ink-faint);">Nu e lista completă ITU — doar cele mai des întâlnite pe bandă. Caută mai jos.</p>
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="prefixSearch" placeholder="Caută o țară sau un prefix… (ex: Japonia, DL, VE)">
+    <input type="text" id="prefixSearch" aria-label="Caută prefixe DX" placeholder="Caută o țară sau un prefix… (ex: Japonia, DL, VE)">
     <span class="count-pill" id="prefixCount"></span>
   </div>
   <div class="qlist" id="prefixList"></div>
@@ -1135,7 +1135,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="tbl-wrap"><table>
     <thead><tr><th>Concurs</th><th>Ce urmărește</th></tr></thead>
     <tbody>
-      <tr><td class="k">CQ WW DX</td><td>Cel mai mare concurs din lume — ultimul weekend din octombrie (CW) și noiembrie (SSB); punctaj pe țări și zone.</td></tr>
+      <tr><td class="k">CQ WW DX</td><td>Cel mai mare concurs din lume — ultimul weekend din octombrie (SSB) și noiembrie (CW); punctaj pe țări și zone.</td></tr>
       <tr><td class="k">ARRL DX</td><td>Organizat de ARRL (SUA) — stațiile din afara SUA/Canada lucrează exclusiv cu America de Nord.</td></tr>
       <tr><td class="k">IARU HF Championship</td><td>Organizat de IARU, iulie — schimbul include zona ITU; promovează și stațiile HQ ale societăților naționale.</td></tr>
       <tr><td class="k">CQ WPX</td><td>Punctaj pe prefixe unice de indicativ — martie (SSB) și mai (CW).</td></tr>
@@ -1175,7 +1175,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="note">Tehnica de bază pentru acoperire regională fără zonă moartă e <b>NVIS</b> (vezi secțiunea Propagare) — o antenă joasă pe 80/40m care „luminează” propriul județ, nu orizontul îndepărtat.</div>
 
   <h3><span class="n">03</span>Certificat de operator disponibil</h3>
-  <p style="font-size:13.5px;color:var(--ink-dim);">Folosește aceeași identitate criptografică din secțiunea Test de cunoștințe (§17) — nu una separată. Într-un context real de urgență, arăți codul QR unui coordonator la fața locului: indicativ, „operator radioamator disponibil", oră generării. <b>Nu e o acreditare oficială</b> — e o dovadă rapidă, verificabilă offline, că ești cine spui că ești și că știi ce faci.</p>
+  <p style="font-size:13.5px;color:var(--ink-dim);">Folosește aceeași identitate criptografică din secțiunea Test de cunoștințe (§17) — nu una separată. Într-un context real de urgență, arăți codul QR unui coordonator la fața locului: indicativ, „operator radioamator disponibil", oră generării. <b>Nu e o acreditare oficială</b> — e o declarație semnată cu cheia ta, verificabilă offline doar ca integritate: nu dovedește identitatea sau indicativul (oricine poate genera unul cu orice indicativ), așa că are valoare doar dacă cheia ta publică e deja cunoscută/martorizată de cei care o văd.</p>
   <div class="panel">
     <div class="btnrow">
       <button class="btn primary" id="emergencyCertBtn" type="button">🆘 Generează certificat de operator</button>
@@ -1199,19 +1199,19 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="tbl-wrap"><table>
     <thead><tr><th>Clasă</th><th>Probă radiotehnică</th><th>Echivalență</th></tr></thead>
     <tbody>
-      <tr><td class="k">Clasa IV</td><td>Nu</td><td>Clasa de intrare</td></tr>
-      <tr><td class="k">Clasa III</td><td>Da</td><td>—</td></tr>
+      <tr><td class="k">Clasa IV</td><td>Nu</td><td>Clasa de intrare (CEPT Entry-Class)</td></tr>
+      <tr><td class="k">Clasa III</td><td>Da</td><td>CEPT Novice</td></tr>
       <tr><td class="k">Clasa II</td><td>Da</td><td>HAREC (recunoaștere CEPT)</td></tr>
       <tr><td class="k">Clasa I</td><td>Da</td><td>HAREC (recunoaștere CEPT) — treapta superioară</td></tr>
     </tbody>
   </table></div>
   <p style="font-size:13px;color:var(--ink-dim);">Echivalența <b>HAREC</b> (Harmonised Amateur Radio Examination Certificate) înseamnă recunoaștere reciprocă în toate țările CEPT — poți opera temporar și din alte țări membre, sub reglementările lor locale.</p>
 
-  <h3><span class="n">02</span>Progresul e obligatoriu, nu opțional</h3>
-  <p style="font-size:13.5px;color:var(--ink-dim);">Clasele se parcurg strict în ordine — <b>IV → III → II → I</b> — nu se poate „sări” direct la o clasă superioară. Între promovarea unei clase și înscrierea la următoarea trebuie să treacă minimum <b>12 luni</b>.</p>
+  <h3><span class="n">02</span>Condiții de înscriere pe clase</h3>
+  <p style="font-size:13.5px;color:var(--ink-dim);">Pentru examenul de <b>Clasa II</b> trebuie să deții o autorizație de <b>Clasa III</b> obținută cu cel puțin <b>12 luni</b> înainte, iar pentru <b>Clasa I</b> una de <b>Clasa II</b>, tot cu cel puțin <b>12 luni</b> înainte (Decizia ANCOM 245/2017, art. 12(5)–(6), în versiunea consolidată din 31.03.2022). Nu se poate deci „sări” direct la Clasa I. Pentru Clasa III textul consultat nu cere Clasa IV (minorii sub 14 ani se pot înscrie doar la Clasa IV) — verifică pe ancom.ro regulile în vigoare.</p>
 
   <h3><span class="n">03</span>Examenul</h3>
-  <p style="font-size:13.5px;color:var(--ink-dim);">Sesiunile (ordinare și extraordinare) sunt anunțate periodic pe ancom.ro, în diverse orașe — nu doar la București. De exemplu, în 2026 s-au desfășurat sesiuni la București (20–21 mai) și la Câmpina, la Fundația Zamolxes (16 iulie). Clasa IV nu are probă de radiotehnică; Clasele II și III includ o lucrare scrisă de radiotehnică, pe lângă reglementări și proceduri.</p>
+  <p style="font-size:13.5px;color:var(--ink-dim);">Sesiunile (ordinare și extraordinare) sunt anunțate periodic pe ancom.ro, în diverse orașe — nu doar la București. De exemplu, în 2026 s-au desfășurat sesiuni la București (20–21 mai) și la Câmpina, la Fundația Zamolxes (16 iulie). Clasa IV nu are probă de radiotehnică; Clasele I, II și III includ o lucrare scrisă de radiotehnică, pe lângă reglementări și proceduri.</p>
 
   <h3><span class="n">04</span>Resurse de pregătire</h3>
   <div class="grid3">
@@ -1392,7 +1392,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="glosarSearch" placeholder="Caută un termen… (ex: balun, DX, elmer, ragchew)">
+    <input type="text" id="glosarSearch" aria-label="Caută în glosar" placeholder="Caută un termen… (ex: balun, DX, elmer, ragchew)">
     <span class="count-pill" id="glosarCount"></span>
   </div>
 
@@ -1481,7 +1481,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </details>
   </div>
   <div class="legal">
-    Conținut educațional, verificat la 2026-08-05 (v4.1 de mai sus) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către niciun server — tot ce vezi rulează local, în browserul tău.
+    Conținut educațional, verificat la 2026-08-05 (v4.1 de mai sus) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către vreun server terț (singura cerere de rețea e verificarea de integritate, opțională, care re-descarcă acest fișier) — tot ce vezi rulează local, în browserul tău.
   </div>
 </footer>
 </main>
@@ -13932,6 +13932,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
 function $(sel){ return document.querySelector(sel); }
 function $$(sel){ return document.querySelectorAll(sel); }
 function pad2(n){ return n<10 ? '0'+n : ''+n; }
+function escH(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 function shuffle(arr){
   const a = arr.slice();
   for(let i=a.length-1;i>0;i--){
@@ -14064,7 +14065,7 @@ const GLOSSARY = [
   ['Balun','Transformă între o linie neechilibrată (coaxial) și o sarcină echilibrată (dipol) — vezi secțiunea Echipamente.'],
   ['Band-hopping','Schimbarea rapidă a benzii de lucru, în căutarea condițiilor bune de propagare.'],
   ['Break-in','Capacitatea de a recepționa între propriile semne Morse (vezi QSK), fără comutare manuală emisie–recepție.'],
-  ['Bug','Manipulator Morse semi-automat, mecanic, care generează liniuțele automat printr-un arc vibrant.'],
+  ['Bug','Manipulator Morse semi-automat, mecanic, care generează punctele automat printr-un pendul/arc vibrant; liniuțele se fac manual.'],
   ['Callsign / indicativ','Identificatorul unic al unei stații, alocat de administrația națională — vezi secțiunea Indicative de apel.'],
   ['Contest','Concurs de radiocomunicații, punctat după numărul și diversitatea legăturilor — vezi secțiunea Concursuri.'],
   ['CQ','Apel general — „caut pe oricine” — vezi secțiunea Structura unui QSO.'],
@@ -14125,7 +14126,7 @@ const GLOSSARY = [
   ['UHF','Ultra High Frequency, 300 MHz – 3 GHz; la radioamatori, mai ales banda 70cm.'],
   ['VHF','Very High Frequency, 30–300 MHz; la radioamatori, mai ales banda 2m.'],
   ['VOACAP','Instrument de predicție a propagării HF, dezvoltat inițial pentru Voice of America.'],
-  ['WARC bands','Benzile 30m/17m/12m, fără concursuri și fără fonie — vezi secțiunea Benzi &amp; spectru.'],
+  ['WARC bands','Benzile 30m/17m/12m, fără concursuri (30m e și fără fonie) — vezi secțiunea Benzi &amp; spectru.'],
   ['Winlink','Email prin radio — vezi Moduri de operare.'],
   ['WPM','Words Per Minute — viteza de transmitere Morse — vezi secțiunea Codul Morse.'],
   ['WSPR','Weak Signal Propagation Reporter — baliză automată de test al propagării — vezi Moduri de operare.'],
@@ -14158,10 +14159,10 @@ const PREFIXES = [
    ============================================================ */
 const QUIZ_CAT_LABELS = {reguli:'Reguli ANCOM', tehnic:'Tehnic', qcod:'Coduri Q', morse:'Morse', benzi:'Benzi', istorie:'Istorie'};
 const QUIZ = [
-  {cat:'reguli', q:'Câte clase de certificat de radioamator există în România?', opts:['Două','Trei','Patru','Cinci'], correct:2, explain:'Patru clase — IV, III, II, I — parcurse strict în ordine.'},
+  {cat:'reguli', q:'Câte clase de certificat de radioamator există în România?', opts:['Două','Trei','Patru','Cinci'], correct:2, explain:'Patru clase — IV, III, II, I; la examenele pentru Clasa II și Clasa I se cere autorizația clasei imediat inferioare, deținută de cel puțin 12 luni.'},
   {cat:'reguli', q:'Care clase de certificat sunt echivalente HAREC (recunoaștere CEPT)?', opts:['III și IV','I și II','Doar Clasa I','Toate patru'], correct:1, explain:'Clasele I și II sunt echivalente HAREC, recunoscute reciproc în țările CEPT.'},
-  {cat:'reguli', q:'Se poate obține direct Clasa I, fără a trece prin celelalte?', opts:['Da, cu studii de electronică','Nu — progresul IV→III→II→I e obligatoriu','Da, contra unei taxe suplimentare','Doar cu aprobare specială ANCOM'], correct:1, explain:'Ordinea claselor e strict obligatorie, cu minimum 12 luni între ele.'},
-  {cat:'reguli', q:'Ce interval minim trebuie să treacă între promovarea unei clase și înscrierea la următoarea?', opts:['3 luni','6 luni','12 luni','24 luni'], correct:2, explain:'Minimum 12 luni între promovarea unei clase și înscrierea la următoarea.'},
+  {cat:'reguli', q:'Se poate obține direct Clasa I, fără a trece prin celelalte?', opts:['Da, cu studii de electronică','Nu — pentru Clasa I trebuie să ai Clasa II de cel puțin 12 luni','Da, contra unei taxe suplimentare','Doar cu aprobare specială ANCOM'], correct:1, explain:'Examenul de Clasa I cere o autorizație de Clasa II obținută cu cel puțin 12 luni înainte (art. 12(6), Decizia 245/2017).'},
+  {cat:'reguli', q:'Pentru examenul de Clasa II sau Clasa I, de cât timp minim trebuie deținută autorizația clasei imediat inferioare?', opts:['3 luni','6 luni','12 luni','24 luni'], correct:2, explain:'Minimum 12 luni (art. 12(5)–(6), Decizia ANCOM 245/2017, versiunea consolidată din 31.03.2022).'},
   {cat:'reguli', q:'Care clasă de certificat NU are probă de radiotehnică la examen?', opts:['Clasa I','Clasa II','Clasa III','Clasa IV'], correct:3, explain:'Clasa IV, clasa de intrare, e singura fără probă de radiotehnică.'},
   {cat:'reguli', q:'Cine reprezintă radioamatorii români internațional, ca membru IARU?', opts:['ANCOM','FRR','Ministerul Comunicațiilor','STS'], correct:1, explain:'ANCOM e regulatorul de stat; FRR e societatea națională, membră IARU.'},
   {cat:'reguli', q:'Cât timp e valabilă o autorizație de stație de radioamator în România?', opts:['1 an','3 ani','5 ani','Pe viață'], correct:2, explain:'Valabilă 5 ani, cu reînnoire cerută cu 30 de zile înainte de expirare.'},
@@ -14218,7 +14219,7 @@ const QUIZ = [
   {cat:'morse', q:'Codul Morse pentru cifra „5” este:', opts:['·····','−−−−−','··−−−','−−···'], correct:0, explain:'Cifrele 1–5 cresc numărul de puncte; 6–0 cresc numărul de liniuțe.'},
   {cat:'morse', q:'Prosemnul „BT” (−···−), transmis lipit, marchează:', opts:['Sfârșitul legăturii','Un separator / paragraf nou','O cerere de repetare','Începutul unui apel de urgență'], correct:1, explain:'BT desparte părți ale unui mesaj — adesea scris „=” în transcriere.'},
   {cat:'benzi', q:'Ce structură are, tipic, o bandă HF de radioamator?', opts:['Doar fonie','Segmente CW, digital și fonie','Doar CW','Doar digital'], correct:1, explain:'Structura tipică: telegrafie (CW) jos în bandă, digital la mijloc, fonie sus.'},
-  {cat:'benzi', q:'Care benzi HF sunt „WARC” (fără concursuri, fără fonie)?', opts:['40m, 20m, 10m','30m, 17m, 12m','80m, 15m','Toate benzile HF'], correct:1, explain:'30m, 17m și 12m sunt benzile WARC — fără concursuri, fără fonie.'},
+  {cat:'benzi', q:'Care benzi HF sunt „WARC” (fără concursuri)?', opts:['40m, 20m, 10m','30m, 17m, 12m','80m, 15m','Toate benzile HF'], correct:1, explain:'30m, 17m și 12m sunt benzile WARC — fără concursuri; 30m e doar CW/digital, iar 17m și 12m permit și fonie.'},
   {cat:'benzi', q:'Frecvența de apel general SSB pe 2m este, convențional:', opts:['145,500 MHz','144,300 MHz','433,500 MHz','432,200 MHz'], correct:1, explain:'144,300 MHz e apelul SSB pe 2m; 145,500 MHz e apelul general/mobil FM.'},
   {cat:'benzi', q:'Banda de 20m se încadrează, aproximativ, între:', opts:['1,8–2,0 MHz','3,5–3,8 MHz','14,0–14,35 MHz','28,0–29,7 MHz'], correct:2, explain:'20m = 14000–14350 kHz, banda DX „de bază” pe HF.'},
   {cat:'benzi', q:'Ce înseamnă convenția „6dB pe unitate S” a S-metrului?', opts:['O regulă fizică universală','O recomandare IARU, nu o lege fizică','Se aplică doar pe VHF','A fost abandonată complet'], correct:1, explain:'E o recomandare IARU — foarte puține S-metre comerciale sunt calibrate exact după ea.'},
@@ -14376,7 +14377,7 @@ function playMorse(text){
   let t = ctx.currentTime + 0.08;
 
   groups.forEach(group=>{
-    if(group==='/'){ t += wordGap; return; }
+    if(group==='/'){ t += (wordGap - letterGap); return; }
     group.split('').forEach(sym=>{
       const dur = sym==='-' ? dah : dit;
       const osc = ctx.createOscillator();
@@ -14591,14 +14592,14 @@ function checkKeyer(){
   const target = (($('#keyerTarget').value||'SOS').toUpperCase().trim());
   const decoded = morseDecode(keyerBuffer.trim());
   const match = decoded === target;
-  let msg = 'Ai trimis: <span style="font-family:var(--font-mono);">'+(decoded||'—')+'</span> · țintă: <span style="font-family:var(--font-mono);">'+target+'</span> — ';
+  let msg = 'Ai trimis: <span style="font-family:var(--font-mono);">'+escH(decoded||'—')+'</span> · țintă: <span style="font-family:var(--font-mono);">'+escH(target)+'</span> — ';
   if(match){
     msg += '<span style="color:var(--phosphor);">✓ potrivire exactă</span>';
   } else {
     const diffs = compareKeyerAttempt(target, keyerBuffer);
     if(diffs.length){
       const d = diffs[0];
-      msg += 'diferă la litera „'+d.litera+'” (poziția '+(d.poz+1)+'): ai trimis <span style="font-family:var(--font-mono);">'+d.trimis+'</span>, țintă era <span style="font-family:var(--font-mono);">'+d.asteptat+'</span>';
+      msg += 'diferă la litera „'+escH(d.litera)+'” (poziția '+(d.poz+1)+'): ai trimis <span style="font-family:var(--font-mono);">'+d.trimis+'</span>, țintă era <span style="font-family:var(--font-mono);">'+d.asteptat+'</span>';
       if(d.trimis.length !== d.asteptat.length && d.trimis!=='(lipsă)' && d.asteptat!=='(lipsă)'){
         msg += d.trimis.length > d.asteptat.length ? ' — poate ai lungit vreo liniuță/scurtat vreun punct în plus' : ' — poate ai scurtat vreo liniuță la punct';
       }
@@ -14721,7 +14722,7 @@ function renderQuizQuestion(){
     return;
   }
   const item = quizRound[quizIdx];
-  const optsHtml = item.opts.map((o,i)=>`<button class="quiz-opt" data-i="${i}">${o}</button>`).join('');
+  const optsHtml = shuffle(item.opts.map((o,i)=>i)).map(i=>`<button class="quiz-opt" data-i="${i}">${item.opts[i]}</button>`).join('');
   area.innerHTML = `<div class="quiz-card">
     <div class="quiz-q">Întrebarea ${quizIdx+1}/${quizRound.length} · <span style="color:var(--ink-faint);font-size:11px;text-transform:uppercase;letter-spacing:.06em;">${QUIZ_CAT_LABELS[item.cat]}</span><br>${item.q}</div>
     ${optsHtml}
@@ -14737,7 +14738,7 @@ function renderQuizQuestion(){
         quizScore.correct++;
       } else {
         btn.classList.add('wrong');
-        $$('#quizArea .quiz-opt')[item.correct].classList.add('correct');
+        $('#quizArea .quiz-opt[data-i="'+item.correct+'"]').classList.add('correct');
       }
       if(srsMode){
         const id = hashStr(item.q);
@@ -14984,7 +14985,7 @@ function srsImportFile(file){
       if(!data.eter_srs || typeof data.eter_srs!=='object') throw new Error('format necunoscut');
       let added=0;
       Object.entries(data.eter_srs).forEach(([id,card])=>{
-        if(card && typeof card.interval==='number'){ srsState[id]=card; added++; }
+        if(card && typeof card.interval==='number' && typeof card.dueDate==='number' && id!=='__proto__'){ srsState[id]=card; added++; }
       });
       $('#srsStatus').textContent = 'Importat: progres pentru '+added+' întrebări.';
       renderMicrocredentials();
@@ -15090,7 +15091,7 @@ async function applyBackupSelection(){
       pendingBackup.notite.forEach(n=>{ if(n && n.term && n.def) personalNotes.push({term:String(n.term), def:String(n.def)}); });
       renderNotes(); applied.push('notițe');
     } else if(key==='srs'){
-      Object.assign(srsState, pendingBackup.srs);
+      Object.entries(pendingBackup.srs).forEach(([id,card])=>{ if(card && typeof card.interval==='number' && typeof card.dueDate==='number' && id!=='__proto__') srsState[id]=card; });
       renderMicrocredentials(); applied.push('SRS');
     } else if(key==='koch'){
       kochLevel = Math.min(KOCH_ORDER.length, Math.max(2, Math.round(pendingBackup.koch.level)));
@@ -15352,15 +15353,15 @@ function verifyCertificateFile(file){
         let fresh = '';
         if(s.prospetimeCategorii){
           const stale = Object.entries(s.prospetimeCategorii).filter(([c,v])=>v==='posibil depășit').map(([c])=>QUIZ_CAT_LABELS[c]||c);
-          if(stale.length) fresh = ' · <span style="color:var(--amber);">posibil depășit la: '+stale.join(', ')+'</span>';
+          if(stale.length) fresh = ' · <span style="color:var(--amber);">posibil depășit la: '+stale.map(escH).join(', ')+'</span>';
         }
         const credHash = await hashCredential(cred);
         const shortCode = credHash.slice(0,8).toUpperCase();
         const revocation = knownRevocations.find(r=>r.hash===credHash && r.issuerJwk.x===cred.proof.verificationMethod.publicKeyJwk.x && r.issuerJwk.y===cred.proof.verificationMethod.publicKeyJwk.y);
         if(revocation){
-          result.innerHTML = '<span style="color:#c0392b;">⚠ Semnătură validă, DAR REVOCAT de emitent.</span> Indicativ: '+(s.indicativ||'—')+' — nu te baza pe acest certificat.';
+          result.innerHTML = '<span style="color:#c0392b;">⚠ Semnătură validă, DAR REVOCAT de emitent.</span> Indicativ: '+escH(s.indicativ||'—')+' — nu te baza pe acest certificat.';
         } else {
-          result.innerHTML = '<span style="color:var(--phosphor);">✓ Semnătură validă.</span> Indicativ: '+(s.indicativ||'—')+' · Întrebări atinse: '+s.intrebariAtinse+' · Consolidate: '+s.intrebariConsolidate+fresh
+          result.innerHTML = '<span style="color:var(--phosphor);">✓ Semnătură validă.</span> Indicativ: '+escH(s.indicativ||'—')+' · Întrebări atinse: '+escH(s.intrebariAtinse)+' · Consolidate: '+escH(s.intrebariConsolidate)+fresh
             +'<br><span style="font-size:11px;color:var(--ink-faint);">Cod scurt de verificare: <span style="font-family:var(--font-mono);letter-spacing:.1em;">'+shortCode+'</span> — confirmă-l cuiva peste o legătură radio reală, în Morse, nu doar pe ecran.</span>';
           const cwBtn = document.createElement('button');
           cwBtn.className = 'btn'; cwBtn.type = 'button'; cwBtn.style.marginTop = '8px';
@@ -15369,7 +15370,7 @@ function verifyCertificateFile(file){
           result.appendChild(cwBtn);
         }
       } else {
-        result.innerHTML = '<span style="color:#c0392b;">✗ Semnătură INVALIDĂ — fișierul a fost modificat sau nu provine din ETER.</span>';
+        result.innerHTML = '<span style="color:#c0392b;">✗ Semnătură INVALIDĂ — fișierul a fost modificat sau semnătura nu corespunde cheii incluse în el.</span>';
       }
     }catch(e){
       result.innerHTML = '<span style="color:#c0392b;">✗ Fișierul nu pare a fi un certificat ETER valid.</span>';
@@ -15540,7 +15541,7 @@ function witnessCollectionSummary(fileList){
         if(!found.length){ status.textContent = 'Niciun fișier de mărturie valid găsit printre cele importate.'; return; }
         found.sort((a,b)=>new Date(b.data)-new Date(a.data));
         const martori = [...new Set(found.map(f=>f.martor))];
-        status.innerHTML = 'Martorizat de <b>'+martori.length+'</b> persoan'+(martori.length===1?'ă':'e')+' ('+found.length+' mărturii în total) — ultima dată la '+new Date(found[0].data).toLocaleDateString('ro-RO')+'. Semnat de: '+martori.join(', ')+'.';
+        status.innerHTML = 'Martorizat de <b>'+martori.length+'</b> persoan'+(martori.length===1?'ă':'e')+' ('+found.length+' mărturii în total) — ultima dată la '+new Date(found[0].data).toLocaleDateString('ro-RO')+'. Semnat de: '+martori.map(escH).join(', ')+'.';
         const nodes = [...new Set(found.flatMap(f=>[f.martor, f.martorizat]))];
         const edges = found.map(f=>[f.martor, f.martorizat]);
         const canvas = $('#trustGraphCanvas');
@@ -15549,7 +15550,7 @@ function witnessCollectionSummary(fileList){
         if(listEl){
           listEl.style.display = 'block';
           listEl.innerHTML = '<div style="font-size:11px;color:var(--ink-faint);margin-bottom:4px;">Aceleași relații, ca listă text:</div>'
-            + edges.map(([a,b])=>'<div style="font-size:12px;font-family:var(--font-mono);">'+a+' → martorizează → '+b+'</div>').join('');
+            + edges.map(([a,b])=>'<div style="font-size:12px;font-family:var(--font-mono);">'+escH(a)+' → martorizează → '+escH(b)+'</div>').join('');
         }
       }
     };
@@ -15663,7 +15664,7 @@ function buildVibratePattern(text, wpm){
     else { segs.push({on, ms}); }
   }
   groups.forEach(group=>{
-    if(group==='/'){ push(false, wordGap); return; }
+    if(group==='/'){ push(false, wordGap - letterGap); return; }
     group.split('').forEach(sym=>{
       push(true, sym==='-'?dah:dit);
       push(false, symGap);
