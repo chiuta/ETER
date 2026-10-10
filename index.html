@@ -19,7 +19,7 @@
   --line:#243229;
   --line-soft:#1a251f;
   --phosphor:#6fd67f;
-  --phosphor-dim:#3f7a4c;
+  --phosphor-dim:#4f9a5f;
   --phosphor-glow:rgba(111,214,127,.35);
   --amber:#f0a23c;
   --amber-dim:#8a6428;
@@ -27,7 +27,7 @@
   --paper-2:#ddd0ab;
   --ink:#dbe7dc;
   --ink-dim:#8ea497;
-  --ink-faint:#5c6d64;
+  --ink-faint:#7f9187;
   --ink-dark:#1c1810;
   --danger:#d3685f;
   --radius:2px;
@@ -44,19 +44,23 @@
   --panel-2:#ece0c3;
   --line:#cdbf9a;
   --line-soft:#ddd0ab;
-  --phosphor:#2c7a41;
+  --phosphor:#26683a;
   --phosphor-dim:#5c8f66;
   --phosphor-glow:rgba(44,122,65,.18);
-  --amber:#a8641a;
+  --amber:#905310;
   --amber-dim:#c98f4a;
   --paper:#fffdf7;
   --paper-2:#f2e9d2;
   --ink:#241f14;
   --ink-dim:#5c5340;
-  --ink-faint:#8c8262;
+  --ink-faint:#665c42;
   --ink-dark:#1c1810;
   --danger:#a83c34;
 }
+/* a11y (audit 2026-10-10): contrast în tema de zi */
+[data-theme="zi"] .bandbar .seg.cw,[data-theme="zi"] .bandbar .seg.phone{color:#fff;}
+[data-theme="zi"] .quiz-q,[data-theme="zi"] .bandrow .lbl b{color:var(--ink);}
+[data-theme="zi"] a[style*="phosphor-dim"]{color:#2f6e3f !important;}
 *,*::before,*::after{box-sizing:border-box;}
 html{scroll-behavior:auto;}
 body{
@@ -320,7 +324,7 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 .bandrow .lbl{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);margin-bottom:4px;}
 .bandrow .lbl b{color:var(--paper);font-family:var(--font-body);}
 .bandbar{display:flex;height:26px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);}
-.bandbar .seg{position:relative;display:flex;align-items:center;justify-content:center;font-size:9px;font-family:var(--font-mono);color:rgba(0,0,0,.55);cursor:default;}
+.bandbar .seg{position:relative;display:flex;align-items:center;justify-content:center;font-size:9px;font-family:var(--font-mono);color:rgba(0,0,0,.75);cursor:default;}
 .bandbar .seg:hover{filter:brightness(1.18);}
 .seg.cw{background:var(--phosphor);}
 .seg.digi{background:#7fb8d6;}
@@ -569,7 +573,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <h2>Alfabetul fonetic</h2>
   <p class="lede">Când semnalul e slab sau numele sună ambiguu la telefon, literele se „spun” cu cuvinte-cod standardizate ITU — ca să nu confunzi „B” cu „D” sau „M” cu „N”.</p>
 
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
   <table>
     <thead><tr><th>Literă</th><th>Cuvânt NATO/ITU</th><th>Literă</th><th>Cuvânt NATO/ITU</th></tr></thead>
     <tbody id="foneticBody"><!-- populated by JS from PHONETIC data, static fallback below --></tbody>
@@ -579,7 +583,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <h3><span class="n">§</span>Rostirea cifrelor</h3>
   <p style="font-size:13.5px;color:var(--ink-dim);">Puțin știut: și cifrele au o pronunție fonetică oficială ITU, folosită mai ales în trafic radiotelefonic maritim/aeronautic — rareori auzită pe HF amator, dar autentică.</p>
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
   <table><tbody id="digitFoneticBody"></tbody></table>
   </div>
 
@@ -634,12 +638,12 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </nav>
 
   <h3 id="morseAlfabet"><span class="n">01</span>Alfabet și cifre</h3>
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
     <table><tbody id="morseChartBody"></tbody></table>
   </div>
 
   <h3 id="morseProsemne"><span class="n">02</span>Prosemne (litere unite, trimise fără pauză)</h3>
-  <div class="tbl-wrap">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
     <table>
       <thead><tr><th>Prosemn</th><th>Morse</th><th>Sens</th></tr></thead>
       <tbody>
@@ -801,7 +805,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:12.5px;color:var(--ink-faint);">Benzile VHF/UHF includ și segmente dedicate sateliților, radiopachet (APRS), baliză și ATV — simplificate aici la categoriile principale. Banda 6m (50–52 MHz) există și ea în Regiunea 1, dar condițiile de acces variază semnificativ de la o administrație la alta.</p>
 
   <h3><span class="n">03</span>Frecvențe de apel de reținut</h3>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
     <thead><tr><th>Frecvență</th><th>Bandă</th><th>Uz</th></tr></thead>
     <tbody>
       <tr><td class="k">144.300 MHz</td><td>2m</td><td>apel SSB</td></tr>
@@ -830,7 +834,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </div>
 
   <h3><span class="n">§</span>Moduri digitale</h3>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
     <thead><tr><th>Mod</th><th>Tip</th><th>Ce face bine</th></tr></thead>
     <tbody>
       <tr><td class="k">FT8</td><td>weak-signal, structurat</td><td>Decodează semnale aproape sub zgomot; secvențe automate de 15s. Cel mai popular mod digital al momentului.</td></tr>
@@ -918,7 +922,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <h3><span class="n">§</span>Calculator de lungimi</h3>
   <div class="panel">
     <div class="field"><label for="antFreq">Frecvență (MHz)</label><input type="number" id="antFreq" value="14.200" step="0.001" min="1" max="470"></div>
-    <div class="tbl-wrap" aria-live="polite"><table>
+    <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)" aria-live="polite"><table>
       <thead><tr><th>Antenă</th><th>Formulă</th><th>Rezultat</th></tr></thead>
       <tbody>
         <tr><td class="k">Dipol λ/2 (total)</td><td style="font-family:var(--font-mono);font-size:12px;">142,65 / f(MHz)</td><td id="antDipole">—</td></tr>
@@ -1017,7 +1021,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </div>
 
   <h3><span class="n">04</span>Referință S-metru / dB</h3>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
     <thead><tr><th>Nivel S</th><th>dBm (referință HF)</th></tr></thead>
     <tbody>
       <tr><td class="k">S1</td><td>−121 dBm</td></tr>
@@ -1072,7 +1076,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:13.5px;color:var(--ink-dim);">Exemplu: <span style="font-family:var(--font-mono);color:var(--phosphor);font-weight:700;">YO3AIC</span> — <b>YO</b> (prefixul de țară, România) + <b>3</b> (zona/districtul) + <b>AIC</b> (sufixul, unic per stație în acea zonă).</p>
 
   <h3><span class="n">02</span>Districtele YO din România</h3>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
     <thead><tr><th>Zonă</th><th>Județe</th></tr></thead>
     <tbody>
       <tr><td class="k">YO2</td><td>Arad, Caraș-Severin, Hunedoara, Timiș</td></tr>
@@ -1132,7 +1136,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p class="lede">Radioamatorismul competitiv: cine strânge mai multe țări, zone sau prefixe într-un weekend — și diplomele care recompensează colecția strânsă în ani.</p>
 
   <h3><span class="n">01</span>Concursuri majore</h3>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
     <thead><tr><th>Concurs</th><th>Ce urmărește</th></tr></thead>
     <tbody>
       <tr><td class="k">CQ WW DX</td><td>Cel mai mare concurs din lume — ultimul weekend din octombrie (SSB) și noiembrie (CW); punctaj pe țări și zone.</td></tr>
@@ -1145,7 +1149,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </table></div>
 
   <h3><span class="n">02</span>Diplome (awards)</h3>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
     <thead><tr><th>Diplomă</th><th>Condiție</th></tr></thead>
     <tbody>
       <tr><td class="k">DXCC</td><td>Cea mai prestigioasă — confirmarea a peste 100 din cele 340+ entități DXCC recunoscute (ARRL).</td></tr>
@@ -1196,7 +1200,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="note warn">Acest ghid rezumă procedura pe înțelesul tuturor, dar <b>nu înlocuiește</b> sursa oficială. Referința legală e <b>Decizia ANCOM nr. 245/2017</b> — Regulamentul serviciului de amator și al serviciului de amator prin satelit. Verifică mereu <span style="font-family:var(--font-mono);">ancom.ro</span> înainte de examen sau de o cerere oficială — mai ales pentru drepturile exacte (putere, benzi) ale fiecărei clase, pe care nu le reproducem aici din memorie.</div>
 
   <h3><span class="n">01</span>Cele patru clase de certificat</h3>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
     <thead><tr><th>Clasă</th><th>Probă radiotehnică</th><th>Echivalență</th></tr></thead>
     <tbody>
       <tr><td class="k">Clasa IV</td><td>Nu</td><td>Clasa de intrare (CEPT Entry-Class)</td></tr>
@@ -14643,7 +14647,7 @@ function renderGlossary(filter){
   let html='', curLetter='';
   list.forEach(([t,d])=>{
     const L = t[0].toUpperCase();
-    if(L!==curLetter){ curLetter=L; html += `<div class="letterhead">${L}</div>`; }
+    if(L!==curLetter){ curLetter=L; html += `<div><dt class="letterhead">${L}</dt></div>`; }
     html += `<div class="glossitem"><dt>${t}</dt><dd>${d}</dd></div>`;
   });
   $('#glosarList').innerHTML = html || '<div class="glossitem"><dt>—</dt><dd>Niciun rezultat.</dd></div>';
@@ -14894,8 +14898,10 @@ function renderNotes(){
   list.innerHTML = '';
   if(!personalNotes.length){
     const empty = document.createElement('div');
-    empty.style.cssText = 'font-size:12.5px;color:var(--ink-faint);';
-    empty.textContent = 'Niciun termen propriu încă.';
+    const emptyDd = document.createElement('dd');
+    emptyDd.style.cssText = 'margin:0;font-size:12.5px;color:var(--ink-faint);';
+    emptyDd.textContent = 'Niciun termen propriu încă.';
+    empty.appendChild(emptyDd);
     list.appendChild(empty);
     return;
   }
