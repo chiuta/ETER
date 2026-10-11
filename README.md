@@ -1,6 +1,6 @@
 # ETER — Enciclopedia radioamatorului
 
-**Ultima actualizare:** 11 octombrie 2026 · versiune 4.2
+**Ultima actualizare:** 11 octombrie 2026 · versiune 4.3
 
 Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Morse, benzi, propagare, antene, indicative, licențiere ANCOM.
 
@@ -10,7 +10,7 @@ Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Mors
 
 ## Ce este
 
-ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.2, actualizată 2026-10-11; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
+ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.3, actualizată 2026-10-11; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
 
 ## Funcții
 
@@ -21,6 +21,7 @@ Unelte verificate în cod / interfață:
 - Calculatoare: lungimi de antenă, locator Maidenhead (cu „Folosește locația mea"), azimut și distanță (cu busolă live și overlay de cameră AR, opționale), frecvență ⇄ lungime de undă, referință S-metru / dB.
 - Simulator didactic de tendințe de propagare și indicatori solari (SFI, K-index) explicați.
 - Test de cunoștințe cu repetiție spațiată; exportul/importul progresului, al identității și al unui pachet de rezervă; generare și verificare de certificat de operator (cod QR).
+- Căutare globală în meniul din stânga (tasta `/`, sau câmpul „Caută în tot ETER”): găsește secțiuni, titluri de subsecțiuni, coduri Q, abrevieri, termeni din glosar și prefixe DX, ignoră diacriticele; Enter deschide primul rezultat, săgețile navighează lista, Esc golește câmpul. Pe mobil `/` deschide meniul.
 - Mod zi / noapte, printarea secțiunii curente, mod exersare pe ecran complet, butoane „copiază".
 - „Verifică integritatea fișierului" (SHA-256) și „Din ce e făcut fișierul".
 - „Raportează o eroare": deschide formularul GitHub Issues.
@@ -41,7 +42,7 @@ Unelte verificate în cod / interfață:
 - Rețea: textul din aplicație afirmă că nimic nu se încarcă de pe internet, iar în cod nu am găsit scripturi sau resurse externe. Singurele apeluri `fetch` sunt către propriul fișier (`location.href`), pentru „Verifică integritatea fișierului" și „Din ce e făcut fișierul".
 - Linkurile externe (ANCOM, QRZ, radioamator.ro, hamradio.ro, IARU R1, examenyo.net, GitHub, trom.tf, Patreon etc.) se deschid doar dacă le apeși.
 - Funcții care cer permisiuni ale browserului, numai la acțiunea ta: microfon (ascultător Morse), locație, busolă/orientare și cameră (overlay AR, scanare cod QR), sinteză vocală.
-- Pagina are o politică CSP strictă (`default-src 'none'`; fără conexiuni către alte domenii; doar `self`, `data:` și `blob:`).
+- Pagina are o politică CSP strictă (`default-src 'none'`; scripturile sunt permise doar pe hash SHA-256, fără `'unsafe-inline'`; fără conexiuni către alte domenii; doar `self`, `data:` și `blob:`).
 - Aplicația include biblioteci cu licențe proprii (de exemplu generator de coduri QR, MIT), integrate în fișier.
 
 ## Rulare locală / offline
@@ -65,6 +66,11 @@ ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections:
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
 
 ## Istoric / Changelog
+
+### 11 octombrie 2026 (v4.3)
+- Căutare globală în meniu (tasta `/`): secțiuni, titluri, coduri Q, abrevieri, glosar, prefixe.
+- CSP: `script-src` pe hash SHA-256 pentru cele trei scripturi, în locul `'unsafe-inline'`.
+- Conținutul ANCOM nu a fost modificat și nici re-verificat.
 
 ### 11 octombrie 2026 (v4.2)
 - Bara mobilă este acum un reper `header`; titlul principal (h1) există pe toate secțiunile, iar titlurile din subsol sunt h2 (axe: 0 încălcări, toate secțiunile verificate la 1280 și 360 px).

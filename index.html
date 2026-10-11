@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self' data: blob:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-eEs71EP8Zl0TxjYAjbNK3bKInv9BA9VzHkrwECbSzdg=' 'sha256-lYM53oh0REoSy7NyxH67GQqoSmsCKCUrWfrny9nitBo=' 'sha256-9q5/PcLl6BDakn9vsuVv1m5MlM3ZUH3Fuij86UWutGo='; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self' data: blob:; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ETER — Enciclopedia radioamatorului</title>
 <meta name="description" content="Ghid complet, off-line, despre radioamatorism: coduri Q, Morse, benzi, antene, propagare, indicative, licențiere ANCOM și multe altele.">
@@ -127,6 +127,16 @@ button{font-family:inherit;}
   display:flex;align-items:center;justify-content:center;
 }
 
+.gsearch{padding:0 14px 6px;}
+.gsearch .searchbox{margin:6px 0 4px;padding:6px 10px;}
+.gsearch .searchbox input{font-size:13px;min-width:0;}
+.gsearch kbd{font-family:var(--font-mono);font-size:10px;color:var(--ink-faint);border:1px solid var(--line);border-radius:4px;padding:0 5px;}
+.gres{display:flex;flex-direction:column;gap:2px;margin:4px 0 6px;}
+.gres button{display:block;text-align:left;width:100%;background:none;border:1px solid transparent;border-radius:6px;color:var(--ink-dim);padding:6px 8px;cursor:pointer;font-family:var(--font-body);font-size:12.5px;line-height:1.35;}
+.gres button:hover,.gres button:focus-visible{background:var(--panel-2);color:var(--ink);border-color:var(--line);}
+.gres .k{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.gres .t{font-weight:600;color:var(--ink);}
+.gstat{font-size:11px;color:var(--ink-faint);min-height:1em;}
 /* ---------- layout shell ---------- */
 .shell{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:100vh;}
 
@@ -423,8 +433,14 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> ETER</div>
     <div class="tagline">Enciclopedia radioamatorului · off-line</div>
-    <div class="tagline">v4.2 · actualizat 2026-10-11 (cifre verificate 2026-08-05)</div>
+    <div class="tagline">v4.3 · actualizat 2026-10-11 (cifre verificate 2026-08-05)</div>
     <div class="clock"><span>UTC <b id="utcClock">--:--:--</b></span><span id="localClock">--:--</span></div>
+  </div>
+
+  <div class="gsearch" role="search">
+    <div class="searchbox"><span class="ico" aria-hidden="true">⌕</span><input type="text" id="gSearch" autocomplete="off" aria-label="Caută în toată enciclopedia" placeholder="Caută în tot ETER…" aria-controls="gRes"><kbd aria-hidden="true">/</kbd></div>
+    <div class="gstat" id="gStat" role="status"></div>
+    <div class="gres" id="gRes"></div>
   </div>
 
   <div class="navgroup">
@@ -1452,7 +1468,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v4.2</span> (2026-10-11): antet de pagină (reper <code>header</code>) pentru bara mobilă, titluri de subsol în ordine corectă (h2), politică CSP strictă (fără rețea externă), fără modificări de conținut ANCOM; cifrele și regulamentele rămân cele verificate la 2026-08-05. · <span style="font-family:var(--font-mono);">v4.1</span> (2026-08-05): 48 de recenzii punctuale, dintre care 9 chiar au dus la schimbări (restul confirmate deja corecte, nu „reparate" degeaba) — cuprinsuri noi pentru secțiunile Morse și identitate/certificate (ambele crescuseră mult), dată de verificare lângă cifrele din hero, punct final „Azi" pe linia temporală, `aria-label` pentru spectrul audio, diagnostic de trimitere extins cu numărul total de diferențe, auto-teste noi pentru pachetul de rezervă. O corecție de-a mea găsită și reparată: atribuisem greșit aglomerarea de unelte secțiunii ANCOM, quiz-ul era vinovatul real.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v4.3</span> (2026-10-11): căutare globală în meniu (tastă <code>/</code>) peste secțiuni, titluri, coduri Q, abrevieri, glosar și prefixe; CSP cu hash pentru scripturi (fără <code>unsafe-inline</code>); fără modificări de conținut ANCOM. · <span style="font-family:var(--font-mono);">v4.2</span> (2026-10-11): antet de pagină (reper <code>header</code>) pentru bara mobilă, titluri de subsol în ordine corectă (h2), politică CSP strictă (fără rețea externă), fără modificări de conținut ANCOM; cifrele și regulamentele rămân cele verificate la 2026-08-05. · <span style="font-family:var(--font-mono);">v4.1</span> (2026-08-05): 48 de recenzii punctuale, dintre care 9 chiar au dus la schimbări (restul confirmate deja corecte, nu „reparate" degeaba) — cuprinsuri noi pentru secțiunile Morse și identitate/certificate (ambele crescuseră mult), dată de verificare lângă cifrele din hero, punct final „Azi" pe linia temporală, `aria-label` pentru spectrul audio, diagnostic de trimitere extins cu numărul total de diferențe, auto-teste noi pentru pachetul de rezervă. O corecție de-a mea găsită și reparată: atribuisem greșit aglomerarea de unelte secțiunii ANCOM, quiz-ul era vinovatul real.
     <details style="margin-top:4px;"><summary style="cursor:pointer;">versiuni mai vechi (v1.0–v4.0)</summary>
     <span style="font-family:var(--font-mono);">v4.0</span> (2026-08-05): reparat witnessCredential (gardă de tip), corectată cifra din hero, pachet de rezervă, compoziția fișierului. · <span style="font-family:var(--font-mono);">v3.9</span> (2026-08-05): antrenor Koch și de trimitere, legate. · <span style="font-family:var(--font-mono);">v3.8</span> (2026-08-05): ton lateral. · <span style="font-family:var(--font-mono);">v3.7</span> (2026-08-05): antrenor de trimitere. · <span style="font-family:var(--font-mono);">v3.6</span> (2026-08-05): antrenor Koch. · <span style="font-family:var(--font-mono);">v3.5</span> (2026-08-05): accesibilitate, integritate fișier. · <span style="font-family:var(--font-mono);">v3.0–v3.4</span> (2026-08-05): repetiție spațiată, identitate criptografică, certificate W3C VC, QR, martor, revocare, microcredențiale.
     </details>
@@ -1488,7 +1504,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </details>
   </div>
   <div class="legal">
-    Conținut educațional, verificat la 2026-08-05 (reglementări și cifre; v4.2 din 2026-10-11 repară doar accesibilitatea, fără re-verificarea regulamentelor) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către vreun server terț (singura cerere de rețea e verificarea de integritate, opțională, care re-descarcă acest fișier) — tot ce vezi rulează local, în browserul tău.
+    Conținut educațional, verificat la 2026-08-05 (reglementări și cifre; v4.2 și v4.3 din 2026-10-11 nu modifică conținutul de reglementare, fără re-verificarea regulamentelor) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către vreun server terț (singura cerere de rețea e verificarea de integritate, opțională, care re-descarcă acest fișier) — tot ce vezi rulează local, în browserul tău.
   </div>
 </footer>
 </main>
@@ -14800,6 +14816,66 @@ async function copyReportInfo(){
   }
   setTimeout(()=>{ btn.textContent = original; }, 2500);
 }
+// ---------- căutare globală (secțiuni, titluri, coduri Q, abrevieri, glosar, prefixe) ----------
+let _gIdx=null;
+function _plain(h){ return new DOMParser().parseFromString(String(h),'text/html').body.textContent.replace(/\s+/g,' ').trim(); }
+function _gBuild(){
+  const idx=[];
+  $$('.navlink').forEach(b=>{ const sec=b.dataset.sec; const lab=b.textContent.replace(/^§\d+/,'').trim(); const no=(b.textContent.match(/^§\d+/)||[''])[0]; idx.push({kind:'Secțiune',title:lab,sub:no,sec,fold:fold(lab),w:3}); });
+  $$('.section').forEach(sec=>{ const sid=sec.id.replace(/^sec-/,''); sec.querySelectorAll('h3').forEach(h=>{ const hc=h.cloneNode(true); hc.querySelectorAll('.n').forEach(x=>x.remove()); const t=_plain(hc.textContent); if(t.length>2) idx.push({kind:'Titlu',title:t,sub:(sec.querySelector('h2')||{textContent:''}).textContent.trim(),sec:sid,head:h,fold:fold(t),w:2}); }); });
+  QCODES.forEach(([c,d])=>idx.push({kind:'Cod Q',title:c,sub:_plain(d),sec:'qcoduri',input:'qSearch',q:c,fold:fold(c+' '+_plain(d)),w:1}));
+  ABBR.forEach(([c,d])=>idx.push({kind:'Abreviere',title:c,sub:_plain(d),sec:'qcoduri',input:'abbrSearch',q:c,fold:fold(c+' '+_plain(d)),w:1}));
+  GLOSSARY.forEach(([c,d])=>idx.push({kind:'Glosar',title:c,sub:_plain(d),sec:'glosar',input:'glosarSearch',q:c,fold:fold(c+' '+_plain(d)),w:1}));
+  PREFIXES.forEach(([c,d])=>idx.push({kind:'Prefix',title:c+' — '+d,sub:'',sec:'indicative',input:'prefixSearch',q:c,fold:fold(c+' '+d),w:1}));
+  return idx;
+}
+function globalSearch(raw){
+  const q=fold(raw).trim(); if(!q) return {list:[],total:0};
+  if(!_gIdx) _gIdx=_gBuild();
+  const hits=[];
+  _gIdx.forEach(it=>{ const i=it.fold.indexOf(q); if(i<0) return; const tf=fold(it.title); const score=(tf===q?0:tf.startsWith(q)?1:tf.includes(q)?2:4)-it.w*0.1; hits.push([score,it]); });
+  hits.sort((a,b)=>a[0]-b[0]);
+  return {list:hits.slice(0,12).map(h=>h[1]),total:hits.length};
+}
+function gotoHit(it){
+  const btn=document.querySelector('.navlink[data-sec="'+it.sec+'"]'); if(!btn) return; btn.click();
+  if(it.input){ const inp=$('#'+it.input); if(inp){ inp.value=it.q; inp.dispatchEvent(new Event('input',{bubbles:true})); setTimeout(()=>{ inp.scrollIntoView({block:'center'}); inp.focus({preventScroll:true}); },30); } }
+  else if(it.head){ setTimeout(()=>{ it.head.setAttribute('tabindex','-1'); it.head.scrollIntoView({block:'start'}); it.head.focus({preventScroll:true}); },30); }
+  else { const h=$('#sec-'+it.sec+' h2'); if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); } }
+}
+function initGlobalSearch(){
+  const inp=$('#gSearch'), res=$('#gRes'), st=$('#gStat'); if(!inp) return;
+  function paint(){
+    const r=globalSearch(inp.value); res.textContent='';
+    if(!inp.value.trim()){ st.textContent=''; return; }
+    if(!r.list.length){ st.textContent='Niciun rezultat pentru „'+inp.value.trim()+'”.'; return; }
+    st.textContent=r.total+(r.total===1?' rezultat':' rezultate')+(r.total>r.list.length?' (primele '+r.list.length+')':'');
+    r.list.forEach(it=>{ const b=document.createElement('button'); b.type='button';
+      const k=document.createElement('span'); k.className='k'; k.textContent=it.kind+(it.kind==='Secțiune'&&it.sub?' '+it.sub:''); b.appendChild(k);
+      const t=document.createElement('span'); t.className='t'; t.textContent=it.title; b.appendChild(t);
+      if(it.sub&&it.kind!=='Secțiune'){ const d=document.createElement('span'); d.textContent=' — '+(it.sub.length>70?it.sub.slice(0,70)+'…':it.sub); b.appendChild(d); }
+      b.addEventListener('click',()=>gotoHit(it)); res.appendChild(b); });
+  }
+  inp.addEventListener('input',paint);
+  inp.addEventListener('keydown',e=>{
+    if(e.key==='Enter'){ const r=globalSearch(inp.value); if(r.list[0]){ e.preventDefault(); gotoHit(r.list[0]); } }
+    else if(e.key==='ArrowDown'){ const f=res.querySelector('button'); if(f){ e.preventDefault(); f.focus(); } }
+    else if(e.key==='Escape'&&inp.value){ inp.value=''; paint(); e.stopPropagation(); }
+  });
+  res.addEventListener('keydown',e=>{
+    const bs=[...res.querySelectorAll('button')], i=bs.indexOf(document.activeElement);
+    if(e.key==='ArrowDown'&&i<bs.length-1){ e.preventDefault(); bs[i+1].focus(); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); (i>0?bs[i-1]:inp).focus(); }
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='/'||e.ctrlKey||e.metaKey||e.altKey) return;
+    const tg=document.activeElement&&document.activeElement.tagName;
+    if(tg==='INPUT'||tg==='TEXTAREA'||tg==='SELECT'||(document.activeElement&&document.activeElement.isContentEditable)||keyerActive) return;
+    e.preventDefault();
+    if($('#drawerBtn').offsetParent!==null) openDrawer();
+    inp.focus(); inp.select();
+  });
+}
 function initNav(){
   $$('.navlink').forEach(btn=>{
     btn.addEventListener('click', ()=>{
@@ -16073,6 +16149,7 @@ function runSelfTests(){
 function init(){
   runSelfTests();
   initNav();
+  initGlobalSearch();
   initDrawer();
   initTheme();
   initClocks();
