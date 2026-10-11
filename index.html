@@ -2,6 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self' data: blob:; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ETER — Enciclopedia radioamatorului</title>
 <meta name="description" content="Ghid complet, off-line, despre radioamatorism: coduri Q, Morse, benzi, antene, propagare, indicative, licențiere ANCOM și multe altele.">
@@ -86,6 +87,7 @@ body::before{
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
 }
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 h1,h2,h3,h4{
   font-family:var(--font-display);
   font-weight:800;
@@ -265,12 +267,12 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 }
 .hero .callout{font-family:var(--font-mono);color:var(--amber);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
 .hero .callout .dot{width:7px;height:7px;border-radius:50%;background:var(--phosphor);box-shadow:0 0 8px var(--phosphor);animation:blink 1.8s ease-in-out infinite;}
-.hero h1{
+.hero .ht{
   font-size:clamp(34px,6vw,58px);line-height:1.02;margin-bottom:16px;color:var(--paper);
   text-shadow:0 0 30px rgba(0,0,0,.4);
 }
-[data-theme="zi"] .hero h1{text-shadow:none;}
-.hero h1 .scramble{display:inline-block;}
+[data-theme="zi"] .hero .ht{text-shadow:none;}
+.hero .ht .scramble{display:inline-block;}
 .hero .sub{font-size:16.5px;color:var(--ink-dim);max-width:56ch;margin-bottom:26px;}
 .hero .sub b{color:var(--phosphor);font-weight:600;}
 
@@ -368,7 +370,7 @@ label{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.05em;t
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:34px 44px 50px;max-width:920px;}
 footer .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:26px;}
-footer h5{font-family:var(--font-mono);color:var(--amber);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;}
+footer h2.fh{font-family:var(--font-mono);color:var(--amber);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;}
 footer p,footer li{font-size:12.5px;color:var(--ink-dim);}
 footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
 footer a{color:var(--ink-dim);text-decoration:none;}
@@ -409,11 +411,11 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 <body>
 <a href="#main" class="skip-link">Sări la conținut</a>
 
-<div class="topbar">
+<header class="topbar">
   <button id="drawerBtn" aria-label="Deschide meniul" aria-expanded="false">☰</button>
   <div class="brand">ETER</div>
   <button id="themeBtnMobile" aria-label="Comută tema">◐</button>
-</div>
+</header>
 <div class="scrim" id="scrim"></div>
 
 <div class="shell">
@@ -421,7 +423,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> ETER</div>
     <div class="tagline">Enciclopedia radioamatorului · off-line</div>
-    <div class="tagline">v4.1 · verificat 2026-08-05</div>
+    <div class="tagline">v4.2 · actualizat 2026-10-11 (cifre verificate 2026-08-05)</div>
     <div class="clock"><span>UTC <b id="utcClock">--:--:--</b></span><span id="localClock">--:--</span></div>
   </div>
 
@@ -486,10 +488,11 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 </nav>
 
 <main id="main">
+<h1 class="sr-only">ETER — Enciclopedia radioamatorului</h1>
 <section class="section active" id="sec-acasa">
   <div class="hero">
     <div class="callout"><span class="dot"></span> GHID COMPLET · OFF-LINE · FĂRĂ CONT · FĂRĂ URMĂRIRE</div>
-    <h1><span class="scramble" id="scrambleTitle">UNDE FĂRĂ FRONTIERE</span></h1>
+    <h2 class="ht"><span class="scramble" id="scrambleTitle">UNDE FĂRĂ FRONTIERE</span></h2>
     <p class="sub">Un ghid complet despre radioamatorism — de la codul Morse și propagarea ionosferică, până la obținerea indicativului <b>YO</b> de la ANCOM. Fără server, fără cloud, fără cont: un singur fișier HTML care funcționează la fel de bine într-un adăpost antiatomic ca și în browser.</p>
 
     <div class="waterfall" aria-hidden="true" id="waterfall"></div>
@@ -500,7 +503,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
       <div class="st"><div class="v">4</div><div class="l">clase de licență ANCOM</div></div>
       <div class="st"><div class="v">340+</div><div class="l">entități DXCC de „vânat”</div></div>
     </div>
-    <div style="font-size:10px;color:var(--ink-faint);margin-top:8px;">Cifre verificate la 5 august 2026 — vezi Istoric, în subsol, pentru ce s-a corectat și când.</div>
+    <div style="font-size:10px;color:var(--ink-faint);margin-top:8px;">Cifre verificate la 5 august 2026; nereverificate la 11 octombrie 2026 — vezi Istoric, în subsol, pentru ce s-a corectat și când.</div>
   </div>
 
   <div style="padding:36px 44px 10px;max-width:920px;" id="acasaBody">
@@ -573,7 +576,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <h2>Alfabetul fonetic</h2>
   <p class="lede">Când semnalul e slab sau numele sună ambiguu la telefon, literele se „spun” cu cuvinte-cod standardizate ITU — ca să nu confunzi „B” cu „D” sau „M” cu „N”.</p>
 
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 1">
   <table>
     <thead><tr><th>Literă</th><th>Cuvânt NATO/ITU</th><th>Literă</th><th>Cuvânt NATO/ITU</th></tr></thead>
     <tbody id="foneticBody"><!-- populated by JS from PHONETIC data, static fallback below --></tbody>
@@ -583,7 +586,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 
   <h3><span class="n">§</span>Rostirea cifrelor</h3>
   <p style="font-size:13.5px;color:var(--ink-dim);">Puțin știut: și cifrele au o pronunție fonetică oficială ITU, folosită mai ales în trafic radiotelefonic maritim/aeronautic — rareori auzită pe HF amator, dar autentică.</p>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 2">
   <table><tbody id="digitFoneticBody"></tbody></table>
   </div>
 
@@ -638,12 +641,12 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </nav>
 
   <h3 id="morseAlfabet"><span class="n">01</span>Alfabet și cifre</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 3">
     <table><tbody id="morseChartBody"></tbody></table>
   </div>
 
   <h3 id="morseProsemne"><span class="n">02</span>Prosemne (litere unite, trimise fără pauză)</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)">
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 4">
     <table>
       <thead><tr><th>Prosemn</th><th>Morse</th><th>Sens</th></tr></thead>
       <tbody>
@@ -805,7 +808,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:12.5px;color:var(--ink-faint);">Benzile VHF/UHF includ și segmente dedicate sateliților, radiopachet (APRS), baliză și ATV — simplificate aici la categoriile principale. Banda 6m (50–52 MHz) există și ea în Regiunea 1, dar condițiile de acces variază semnificativ de la o administrație la alta.</p>
 
   <h3><span class="n">03</span>Frecvențe de apel de reținut</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 5"><table>
     <thead><tr><th>Frecvență</th><th>Bandă</th><th>Uz</th></tr></thead>
     <tbody>
       <tr><td class="k">144.300 MHz</td><td>2m</td><td>apel SSB</td></tr>
@@ -834,7 +837,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </div>
 
   <h3><span class="n">§</span>Moduri digitale</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 6"><table>
     <thead><tr><th>Mod</th><th>Tip</th><th>Ce face bine</th></tr></thead>
     <tbody>
       <tr><td class="k">FT8</td><td>weak-signal, structurat</td><td>Decodează semnale aproape sub zgomot; secvențe automate de 15s. Cel mai popular mod digital al momentului.</td></tr>
@@ -922,7 +925,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <h3><span class="n">§</span>Calculator de lungimi</h3>
   <div class="panel">
     <div class="field"><label for="antFreq">Frecvență (MHz)</label><input type="number" id="antFreq" value="14.200" step="0.001" min="1" max="470"></div>
-    <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)" aria-live="polite"><table>
+    <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 7" aria-live="polite"><table>
       <thead><tr><th>Antenă</th><th>Formulă</th><th>Rezultat</th></tr></thead>
       <tbody>
         <tr><td class="k">Dipol λ/2 (total)</td><td style="font-family:var(--font-mono);font-size:12px;">142,65 / f(MHz)</td><td id="antDipole">—</td></tr>
@@ -1021,7 +1024,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </div>
 
   <h3><span class="n">04</span>Referință S-metru / dB</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 8"><table>
     <thead><tr><th>Nivel S</th><th>dBm (referință HF)</th></tr></thead>
     <tbody>
       <tr><td class="k">S1</td><td>−121 dBm</td></tr>
@@ -1076,7 +1079,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:13.5px;color:var(--ink-dim);">Exemplu: <span style="font-family:var(--font-mono);color:var(--phosphor);font-weight:700;">YO3AIC</span> — <b>YO</b> (prefixul de țară, România) + <b>3</b> (zona/districtul) + <b>AIC</b> (sufixul, unic per stație în acea zonă).</p>
 
   <h3><span class="n">02</span>Districtele YO din România</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 9"><table>
     <thead><tr><th>Zonă</th><th>Județe</th></tr></thead>
     <tbody>
       <tr><td class="k">YO2</td><td>Arad, Caraș-Severin, Hunedoara, Timiș</td></tr>
@@ -1136,7 +1139,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p class="lede">Radioamatorismul competitiv: cine strânge mai multe țări, zone sau prefixe într-un weekend — și diplomele care recompensează colecția strânsă în ani.</p>
 
   <h3><span class="n">01</span>Concursuri majore</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 10"><table>
     <thead><tr><th>Concurs</th><th>Ce urmărește</th></tr></thead>
     <tbody>
       <tr><td class="k">CQ WW DX</td><td>Cel mai mare concurs din lume — ultimul weekend din octombrie (SSB) și noiembrie (CW); punctaj pe țări și zone.</td></tr>
@@ -1149,7 +1152,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   </table></div>
 
   <h3><span class="n">02</span>Diplome (awards)</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 11"><table>
     <thead><tr><th>Diplomă</th><th>Condiție</th></tr></thead>
     <tbody>
       <tr><td class="k">DXCC</td><td>Cea mai prestigioasă — confirmarea a peste 100 din cele 340+ entități DXCC recunoscute (ARRL).</td></tr>
@@ -1200,7 +1203,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="note warn">Acest ghid rezumă procedura pe înțelesul tuturor, dar <b>nu înlocuiește</b> sursa oficială. Referința legală e <b>Decizia ANCOM nr. 245/2017</b> — Regulamentul serviciului de amator și al serviciului de amator prin satelit. Verifică mereu <span style="font-family:var(--font-mono);">ancom.ro</span> înainte de examen sau de o cerere oficială — mai ales pentru drepturile exacte (putere, benzi) ale fiecărei clase, pe care nu le reproducem aici din memorie.</div>
 
   <h3><span class="n">01</span>Cele patru clase de certificat</h3>
-  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil)"><table>
+  <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tabel (derulabil) 12"><table>
     <thead><tr><th>Clasă</th><th>Probă radiotehnică</th><th>Echivalență</th></tr></thead>
     <tbody>
       <tr><td class="k">Clasa IV</td><td>Nu</td><td>Clasa de intrare (CEPT Entry-Class)</td></tr>
@@ -1423,12 +1426,12 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
 <footer>
   <div class="fgrid">
     <div>
-      <h5>Eter</h5>
+      <h2 class="fh">Eter</h2>
       <p>Un ghid de referință despre radioamatorism, într-un singur fișier HTML — fără server, fără cont, fără telemetrie. Se deschide la fel de bine offline ca online, azi sau peste zece ani.</p>
       <p style="margin-top:10px;">Construit în spiritul <b>trade-free</b>: cunoașterea nu ar trebui să aibă nevoie de intermediari — nici comerciali, nici birocratici — între tine și ea.</p>
     </div>
     <div>
-      <h5>Autor</h5>
+      <h2 class="fh">Autor</h2>
       <ul>
         <li><a href="https://chiuta.github.io" target="_blank" rel="noopener">chiuta.github.io</a></li>
         <li><a href="https://www.patreon.com/c/alexio_tf" target="_blank" rel="noopener">Patreon — Printre Inteligențe</a></li>
@@ -1437,7 +1440,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
       </ul>
     </div>
     <div>
-      <h5>Surse &amp; resurse</h5>
+      <h2 class="fh">Surse &amp; resurse</h2>
       <ul>
         <li><a href="https://www.ancom.ro" target="_blank" rel="noopener">ancom.ro</a> — regulator, examene, indicative</li>
         <li><a href="https://www.hamradio.ro" target="_blank" rel="noopener">hamradio.ro</a> — FRR, biroul QSL</li>
@@ -1449,7 +1452,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v4.1</span> (2026-08-05): 48 de recenzii punctuale, dintre care 9 chiar au dus la schimbări (restul confirmate deja corecte, nu „reparate" degeaba) — cuprinsuri noi pentru secțiunile Morse și identitate/certificate (ambele crescuseră mult), dată de verificare lângă cifrele din hero, punct final „Azi" pe linia temporală, `aria-label` pentru spectrul audio, diagnostic de trimitere extins cu numărul total de diferențe, auto-teste noi pentru pachetul de rezervă. O corecție de-a mea găsită și reparată: atribuisem greșit aglomerarea de unelte secțiunii ANCOM, quiz-ul era vinovatul real.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v4.2</span> (2026-10-11): antet de pagină (reper <code>header</code>) pentru bara mobilă, titluri de subsol în ordine corectă (h2), politică CSP strictă (fără rețea externă), fără modificări de conținut ANCOM; cifrele și regulamentele rămân cele verificate la 2026-08-05. · <span style="font-family:var(--font-mono);">v4.1</span> (2026-08-05): 48 de recenzii punctuale, dintre care 9 chiar au dus la schimbări (restul confirmate deja corecte, nu „reparate" degeaba) — cuprinsuri noi pentru secțiunile Morse și identitate/certificate (ambele crescuseră mult), dată de verificare lângă cifrele din hero, punct final „Azi" pe linia temporală, `aria-label` pentru spectrul audio, diagnostic de trimitere extins cu numărul total de diferențe, auto-teste noi pentru pachetul de rezervă. O corecție de-a mea găsită și reparată: atribuisem greșit aglomerarea de unelte secțiunii ANCOM, quiz-ul era vinovatul real.
     <details style="margin-top:4px;"><summary style="cursor:pointer;">versiuni mai vechi (v1.0–v4.0)</summary>
     <span style="font-family:var(--font-mono);">v4.0</span> (2026-08-05): reparat witnessCredential (gardă de tip), corectată cifra din hero, pachet de rezervă, compoziția fișierului. · <span style="font-family:var(--font-mono);">v3.9</span> (2026-08-05): antrenor Koch și de trimitere, legate. · <span style="font-family:var(--font-mono);">v3.8</span> (2026-08-05): ton lateral. · <span style="font-family:var(--font-mono);">v3.7</span> (2026-08-05): antrenor de trimitere. · <span style="font-family:var(--font-mono);">v3.6</span> (2026-08-05): antrenor Koch. · <span style="font-family:var(--font-mono);">v3.5</span> (2026-08-05): accesibilitate, integritate fișier. · <span style="font-family:var(--font-mono);">v3.0–v3.4</span> (2026-08-05): repetiție spațiată, identitate criptografică, certificate W3C VC, QR, martor, revocare, microcredențiale.
     </details>
@@ -1485,7 +1488,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </details>
   </div>
   <div class="legal">
-    Conținut educațional, verificat la 2026-08-05 (v4.1 de mai sus) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către vreun server terț (singura cerere de rețea e verificarea de integritate, opțională, care re-descarcă acest fișier) — tot ce vezi rulează local, în browserul tău.
+    Conținut educațional, verificat la 2026-08-05 (reglementări și cifre; v4.2 din 2026-10-11 repară doar accesibilitatea, fără re-verificarea regulamentelor) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către vreun server terț (singura cerere de rețea e verificarea de integritate, opțională, care re-descarcă acest fișier) — tot ce vezi rulează local, în browserul tău.
   </div>
 </footer>
 </main>

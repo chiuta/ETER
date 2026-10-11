@@ -1,5 +1,7 @@
 # ETER — Enciclopedia radioamatorului
 
+**Ultima actualizare:** 11 octombrie 2026 · versiune 4.2
+
 Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Morse, benzi, propagare, antene, indicative, licențiere ANCOM.
 
 **Live:** https://chiuta.github.io/ETER/
@@ -8,7 +10,7 @@ Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Mors
 
 ## Ce este
 
-ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.1, „verificat 2026-08-05"), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
+ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.2, actualizată 2026-10-11; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
 
 ## Funcții
 
@@ -39,6 +41,7 @@ Unelte verificate în cod / interfață:
 - Rețea: textul din aplicație afirmă că nimic nu se încarcă de pe internet, iar în cod nu am găsit scripturi sau resurse externe. Singurele apeluri `fetch` sunt către propriul fișier (`location.href`), pentru „Verifică integritatea fișierului" și „Din ce e făcut fișierul".
 - Linkurile externe (ANCOM, QRZ, radioamator.ro, hamradio.ro, IARU R1, examenyo.net, GitHub, trom.tf, Patreon etc.) se deschid doar dacă le apeși.
 - Funcții care cer permisiuni ale browserului, numai la acțiunea ta: microfon (ascultător Morse), locație, busolă/orientare și cameră (overlay AR, scanare cod QR), sinteză vocală.
+- Pagina are o politică CSP strictă (`default-src 'none'`; fără conexiuni către alte domenii; doar `self`, `data:` și `blob:`).
 - Aplicația include biblioteci cu licențe proprii (de exemplu generator de coduri QR, MIT), integrate în fișier.
 
 ## Rulare locală / offline
@@ -60,3 +63,11 @@ ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections:
 ## Audit
 
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
+
+## Istoric / Changelog
+
+### 11 octombrie 2026 (v4.2)
+- Bara mobilă este acum un reper `header`; titlul principal (h1) există pe toate secțiunile, iar titlurile din subsol sunt h2 (axe: 0 încălcări, toate secțiunile verificate la 1280 și 360 px).
+- Etichetele tabelelor derulabile sunt unice (landmark-unique).
+- Adăugat CSP strict (`default-src 'none'`).
+- Conținutul ANCOM (cifre, sesiuni de examen, Decizia 245/2017) NU a fost re-verificat la 11.10.2026: rămâne marcat explicit „verificat la 2026-08-05”; verifică pe ancom.ro.
