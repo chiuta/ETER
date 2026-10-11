@@ -1,6 +1,6 @@
 # ETER — Enciclopedia radioamatorului
 
-**Ultima actualizare:** 11 octombrie 2026 · versiune 4.3
+**Ultima actualizare:** 11 octombrie 2026 · versiune 4.4
 
 Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Morse, benzi, propagare, antene, indicative, licențiere ANCOM.
 
@@ -10,7 +10,7 @@ Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Mors
 
 ## Ce este
 
-ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.3, actualizată 2026-10-11; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
+ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.4, actualizată 2026-10-11; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
 
 ## Funcții
 
@@ -39,7 +39,7 @@ Unelte verificate în cod / interfață:
 ## Confidențialitate și rețea
 
 - Local: nu am găsit utilizare de `localStorage`, `sessionStorage` sau IndexedDB în cod. Progresul, nivelul și identitatea se păstrează doar prin export/import de fișiere.
-- Rețea: textul din aplicație afirmă că nimic nu se încarcă de pe internet, iar în cod nu am găsit scripturi sau resurse externe. Singurele apeluri `fetch` sunt către propriul fișier (`location.href`), pentru „Verifică integritatea fișierului" și „Din ce e făcut fișierul".
+- Rețea: textul din aplicație afirmă că nimic nu se încarcă de pe internet, iar în cod nu am găsit scripturi sau resurse externe. Singurele apeluri `fetch` sunt către propriul fișier (`location.href`), doar când pagina e servită prin URL, pentru „Verifică integritatea fișierului" și „Din ce e făcut fișierul".
 - Linkurile externe (ANCOM, QRZ, radioamator.ro, hamradio.ro, IARU R1, examenyo.net, GitHub, trom.tf, Patreon etc.) se deschid doar dacă le apeși.
 - Funcții care cer permisiuni ale browserului, numai la acțiunea ta: microfon (ascultător Morse), locație, busolă/orientare și cameră (overlay AR, scanare cod QR), sinteză vocală.
 - Pagina are o politică CSP strictă (`default-src 'none'`; scripturile sunt permise doar pe hash SHA-256, fără `'unsafe-inline'`; fără conexiuni către alte domenii; doar `self`, `data:` și `blob:`).
@@ -47,7 +47,7 @@ Unelte verificate în cod / interfață:
 
 ## Rulare locală / offline
 
-Descarcă `index.html` și deschide-l în browser. Aproape totul funcționează fără internet. „Verifică integritatea fișierului" și „Din ce e făcut fișierul" funcționează doar când fișierul este servit prin URL (de exemplu GitHub Pages), nu deschis direct de pe disc (`file://`), conform mesajului din aplicație.
+Descarcă `index.html` și deschide-l în browser. Aproape totul funcționează fără internet. „Verifică integritatea fișierului" și „Din ce e făcut fișierul" funcționează când fișierul este servit prin URL (de exemplu GitHub Pages); din `file://` (deschis de pe disc) browserul nu permite `fetch`, așa că aplicația îți cere să alegi fișierul `index.html` de pe disc și îl citește doar local (fără rețea). Atenție: se verifică fișierul ales, nu neapărat pagina deschisă acum.
 
 ## Licență
 
@@ -66,6 +66,11 @@ ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections:
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
 
 ## Istoric / Changelog
+
+### 11 octombrie 2026 (v4.4)
+- Prefixul `YO / YP / YQ / YR` (România) a fost adăugat în lista de prefixe (căutarea „YO” dădea 0 rezultate); căutarea de prefixe acceptă și un indicativ întreg (ex. `YO3AIC` → `YO`).
+- „Verifică integritatea fișierului” și „Din ce e făcut fișierul” funcționează și din `file://`: alegi fișierul de pe disc, iar SHA-256 se calculează local; nu se mai face `fetch` de pe `file://`, deci nu mai apare eroare în consolă.
+- Conținutul ANCOM nu a fost modificat și nici re-verificat.
 
 ### 11 octombrie 2026 (v4.3)
 - Căutare globală în meniu (tasta `/`): secțiuni, titluri, coduri Q, abrevieri, glosar, prefixe.

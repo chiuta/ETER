@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-eEs71EP8Zl0TxjYAjbNK3bKInv9BA9VzHkrwECbSzdg=' 'sha256-lYM53oh0REoSy7NyxH67GQqoSmsCKCUrWfrny9nitBo=' 'sha256-9q5/PcLl6BDakn9vsuVv1m5MlM3ZUH3Fuij86UWutGo='; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self' data: blob:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-eEs71EP8Zl0TxjYAjbNK3bKInv9BA9VzHkrwECbSzdg=' 'sha256-lYM53oh0REoSy7NyxH67GQqoSmsCKCUrWfrny9nitBo=' 'sha256-Ja+2EA+x5+NZgP5qgsiZF2hqj8m28x9wEADUxH6S+vs='; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self' data: blob:; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ETER — Enciclopedia radioamatorului</title>
 <meta name="description" content="Ghid complet, off-line, despre radioamatorism: coduri Q, Morse, benzi, antene, propagare, indicative, licențiere ANCOM și multe altele.">
@@ -433,7 +433,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <div class="brandblock">
     <div class="brand"><span class="dot"></span> ETER</div>
     <div class="tagline">Enciclopedia radioamatorului · off-line</div>
-    <div class="tagline">v4.3 · actualizat 2026-10-11 (cifre verificate 2026-08-05)</div>
+    <div class="tagline">v4.4 · actualizat 2026-10-11 (cifre verificate 2026-08-05)</div>
     <div class="clock"><span>UTC <b id="utcClock">--:--:--</b></span><span id="localClock">--:--</span></div>
   </div>
 
@@ -1114,7 +1114,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
   <p style="font-size:12.5px;color:var(--ink-faint);">Nu e lista completă ITU — doar cele mai des întâlnite pe bandă. Caută mai jos.</p>
   <div class="searchbox">
     <span class="ico">⌕</span>
-    <input type="text" id="prefixSearch" aria-label="Caută prefixe DX" placeholder="Caută o țară sau un prefix… (ex: Japonia, DL, VE)">
+    <input type="text" id="prefixSearch" aria-label="Caută prefixe DX" placeholder="Caută o țară, un prefix sau un indicativ… (ex: Japonia, DL, YO3AIC)">
     <span class="count-pill" id="prefixCount"></span>
   </div>
   <div class="qlist" id="prefixList"></div>
@@ -1468,7 +1468,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </div>
   </div>
   <div style="margin-top:18px;font-size:11.5px;color:var(--ink-faint);line-height:1.7;">
-    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v4.3</span> (2026-10-11): căutare globală în meniu (tastă <code>/</code>) peste secțiuni, titluri, coduri Q, abrevieri, glosar și prefixe; CSP cu hash pentru scripturi (fără <code>unsafe-inline</code>); fără modificări de conținut ANCOM. · <span style="font-family:var(--font-mono);">v4.2</span> (2026-10-11): antet de pagină (reper <code>header</code>) pentru bara mobilă, titluri de subsol în ordine corectă (h2), politică CSP strictă (fără rețea externă), fără modificări de conținut ANCOM; cifrele și regulamentele rămân cele verificate la 2026-08-05. · <span style="font-family:var(--font-mono);">v4.1</span> (2026-08-05): 48 de recenzii punctuale, dintre care 9 chiar au dus la schimbări (restul confirmate deja corecte, nu „reparate" degeaba) — cuprinsuri noi pentru secțiunile Morse și identitate/certificate (ambele crescuseră mult), dată de verificare lângă cifrele din hero, punct final „Azi" pe linia temporală, `aria-label` pentru spectrul audio, diagnostic de trimitere extins cu numărul total de diferențe, auto-teste noi pentru pachetul de rezervă. O corecție de-a mea găsită și reparată: atribuisem greșit aglomerarea de unelte secțiunii ANCOM, quiz-ul era vinovatul real.
+    <b style="color:var(--ink-dim);">Istoric</b> — <span style="font-family:var(--font-mono);">v4.4</span> (2026-10-11): prefixul YO / YP / YQ / YR (România) adăugat în lista de prefixe; căutarea de prefixe recunoaște și un indicativ întreg (ex. YO3AIC → YO); verificarea de integritate și „Din ce e făcut fișierul” funcționează și din <code>file://</code> prin alegerea fișierului de pe disc (fără cerere fetch, deci fără eroare în consolă); fără modificări de conținut ANCOM. · <span style="font-family:var(--font-mono);">v4.3</span> (2026-10-11): căutare globală în meniu (tastă <code>/</code>) peste secțiuni, titluri, coduri Q, abrevieri, glosar și prefixe; CSP cu hash pentru scripturi (fără <code>unsafe-inline</code>); fără modificări de conținut ANCOM. · <span style="font-family:var(--font-mono);">v4.2</span> (2026-10-11): antet de pagină (reper <code>header</code>) pentru bara mobilă, titluri de subsol în ordine corectă (h2), politică CSP strictă (fără rețea externă), fără modificări de conținut ANCOM; cifrele și regulamentele rămân cele verificate la 2026-08-05. · <span style="font-family:var(--font-mono);">v4.1</span> (2026-08-05): 48 de recenzii punctuale, dintre care 9 chiar au dus la schimbări (restul confirmate deja corecte, nu „reparate" degeaba) — cuprinsuri noi pentru secțiunile Morse și identitate/certificate (ambele crescuseră mult), dată de verificare lângă cifrele din hero, punct final „Azi" pe linia temporală, `aria-label` pentru spectrul audio, diagnostic de trimitere extins cu numărul total de diferențe, auto-teste noi pentru pachetul de rezervă. O corecție de-a mea găsită și reparată: atribuisem greșit aglomerarea de unelte secțiunii ANCOM, quiz-ul era vinovatul real.
     <details style="margin-top:4px;"><summary style="cursor:pointer;">versiuni mai vechi (v1.0–v4.0)</summary>
     <span style="font-family:var(--font-mono);">v4.0</span> (2026-08-05): reparat witnessCredential (gardă de tip), corectată cifra din hero, pachet de rezervă, compoziția fișierului. · <span style="font-family:var(--font-mono);">v3.9</span> (2026-08-05): antrenor Koch și de trimitere, legate. · <span style="font-family:var(--font-mono);">v3.8</span> (2026-08-05): ton lateral. · <span style="font-family:var(--font-mono);">v3.7</span> (2026-08-05): antrenor de trimitere. · <span style="font-family:var(--font-mono);">v3.6</span> (2026-08-05): antrenor Koch. · <span style="font-family:var(--font-mono);">v3.5</span> (2026-08-05): accesibilitate, integritate fișier. · <span style="font-family:var(--font-mono);">v3.0–v3.4</span> (2026-08-05): repetiție spațiată, identitate criptografică, certificate W3C VC, QR, martor, revocare, microcredențiale.
     </details>
@@ -1504,7 +1504,7 @@ kbd{font-family:var(--font-mono);background:var(--panel-2);border:1px solid var(
     </details>
   </div>
   <div class="legal">
-    Conținut educațional, verificat la 2026-08-05 (reglementări și cifre; v4.2 și v4.3 din 2026-10-11 nu modifică conținutul de reglementare, fără re-verificarea regulamentelor) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către vreun server terț (singura cerere de rețea e verificarea de integritate, opțională, care re-descarcă acest fișier) — tot ce vezi rulează local, în browserul tău.
+    Conținut educațional, verificat la 2026-08-05 (reglementări și cifre; v4.2–v4.4 din 2026-10-11 nu modifică conținutul de reglementare, fără re-verificarea regulamentelor) — dar regulamentele se schimbă. Pentru orice decizie care contează (înscriere la examen, drepturi exacte pe clasă de certificat, plan de benzi curent), <b>ANCOM</b> și <b>FRR</b> rămân sursele autoritare, nu acest fișier. Fără cookie-uri, fără analytics, fără apeluri către vreun server terț (singura cerere de rețea e verificarea de integritate, opțională, care re-descarcă acest fișier) — tot ce vezi rulează local, în browserul tău.
   </div>
 </footer>
 </main>
@@ -14174,7 +14174,7 @@ const PREFIXES = [
   ['PY','Brazilia'],['S5','Slovenia'],['SM','Suedia'],['SP','Polonia'],['SU','Egipt'],
   ['SV','Grecia'],['TA','Turcia'],['TF','Islanda'],['UA','Rusia'],['UR','Ucraina'],
   ['VE','Canada'],['VK','Australia'],['VU','India'],['XE','Mexic'],['YB','Indonezia'],
-  ['YL','Letonia'],['YU','Serbia'],['ZL','Noua Zeelandă'],['ZS','Africa de Sud']
+  ['YL','Letonia'],['YO / YP / YQ / YR','România'],['YU','Serbia'],['ZL','Noua Zeelandă'],['ZS','Africa de Sud']
 ];
 
 /* ============================================================
@@ -14656,8 +14656,15 @@ function renderAbbr(filter){
 }
 function renderPrefixes(filter){
   const q=fold(filter).trim();
-  const list = PREFIXES.filter(([c,d])=> !q || fold(c).includes(q) || fold(d).includes(q));
-  $('#prefixList').innerHTML = list.map(([c,d])=>`<div class="qitem"><div class="code">${c}</div><div class="def">${d}</div></div>`).join('') || '<div class="qitem"><div class="code">—</div><div class="def">Niciun rezultat.</div></div>';
+  let list = PREFIXES.filter(([c,d])=> !q || fold(c).includes(q) || fold(d).includes(q));
+  let note='';
+  // un indicativ întreg (ex. YO3AIC, DL1ABC, 4X6TU): caută cel mai lung prefix care îl începe
+  if(!list.length && /^[a-z0-9]{3,12}$/.test(q) && /\d/.test(q)){
+    let best=null,bl=0;
+    PREFIXES.forEach(row=>{ row[0].split('/').forEach(t=>{ const k=fold(t).replace(/\s+/g,''); if(k && q.startsWith(k) && k.length>bl){ best=row; bl=k.length; } }); });
+    if(best){ list=[best]; note='<div class="qitem"><div class="code">→</div><div class="def">Indicativul <b>'+q.toUpperCase()+'</b> începe cu prefixul <b>'+best[0]+'</b> ('+best[1]+'). Prefixul arată țara de alocare, nu locul în care se află acum operatorul.</div></div>'; }
+  }
+  $('#prefixList').innerHTML = note + (list.map(([c,d])=>`<div class="qitem"><div class="code">${c}</div><div class="def">${d}</div></div>`).join('') || '<div class="qitem"><div class="code">—</div><div class="def">Niciun rezultat.</div></div>');
   $('#prefixCount').textContent = list.length+' / '+PREFIXES.length;
 }
 function renderGlossary(filter){
@@ -15664,27 +15671,46 @@ function signAsWitnessFromQR(compactStr){
     $('#witnessStatus').innerHTML = '<span style="color:#c0392b;">✗ Codul QR scanat nu pare un certificat ETER valid.</span>';
   }
 }
+function pickLocalFile(){
+  return new Promise(res=>{
+    const inp=document.createElement('input'); inp.type='file'; inp.accept='.html,text/html'; inp.style.display='none';
+    inp.addEventListener('change',()=>{ res(inp.files&&inp.files[0]||null); inp.remove(); });
+    inp.addEventListener('cancel',()=>{ res(null); inp.remove(); });
+    document.body.appendChild(inp); inp.click();
+  });
+}
+async function ownFileBytes(){
+  // De pe file:// browserul nu permite fetch; alegem fișierul de pe disc (se citește doar local, nu pleacă nicăieri).
+  if(location.protocol==='file:'){
+    const f=await pickLocalFile(); if(!f) return null;
+    return {buf:await f.arrayBuffer(), name:f.name, local:true};
+  }
+  const resp = await fetch(location.href, {cache:'no-store'});
+  if(!resp.ok) throw new Error('fetch nereușit');
+  return {buf:await resp.arrayBuffer(), name:'', local:false};
+}
 async function checkFileIntegrity(){
   const result = $('#integrityResult');
-  result.textContent = 'Se calculează…';
+  const isFile = location.protocol==='file:';
+  if(isFile) result.textContent = 'Alege fișierul index.html de pe disc (se citește doar local)…'; else result.textContent = 'Se calculează…';
   try{
-    const resp = await fetch(location.href, {cache:'no-store'});
-    if(!resp.ok) throw new Error('fetch nereușit');
-    const buf = await resp.arrayBuffer();
-    const hashBuf = await crypto.subtle.digest('SHA-256', buf);
+    const o = await ownFileBytes();
+    if(!o){ result.textContent = 'Alegere anulată.'; return; }
+    result.textContent = 'Se calculează…';
+    const hashBuf = await crypto.subtle.digest('SHA-256', o.buf);
     const hashHex = Array.from(new Uint8Array(hashBuf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-    result.innerHTML = 'SHA-256 al acestei copii:<br><span style="font-family:var(--font-mono);">'+hashHex+'</span><br>Compară manual cu ce publică autorul — dacă nu se potrivește, fișierul a fost modificat pe drum.';
+    result.innerHTML = 'SHA-256 al '+(o.local?'fișierului ales ('+o.name.replace(/[<>&"]/g,'')+')':'acestei copii')+':<br><span style="font-family:var(--font-mono);">'+hashHex+'</span><br>Compară manual cu ce publică autorul — dacă nu se potrivește, fișierul a fost modificat pe drum.'+(o.local?' (Verifică fișierul de pe disc, nu neapărat pagina deschisă acum.)':'');
   }catch(e){
-    result.textContent = 'Nu pot calcula aici — funcționează doar când fișierul e servit printr-un URL real (ex. GitHub Pages), nu deschis direct de pe disc (file://).';
+    result.textContent = 'Nu pot calcula aici — funcționează când fișierul e servit printr-un URL real (ex. GitHub Pages) sau când îl alegi de pe disc din file://.';
   }
 }
 async function checkFileComposition(){
   const result = $('#compositionResult');
-  result.textContent = 'Se calculează…';
+  if(location.protocol==='file:') result.textContent = 'Alege fișierul index.html de pe disc (se citește doar local)…'; else result.textContent = 'Se calculează…';
   try{
-    const resp = await fetch(location.href, {cache:'no-store'});
-    if(!resp.ok) throw new Error('fetch nereușit');
-    const text = await resp.text();
+    const o = await ownFileBytes();
+    if(!o){ result.textContent = 'Alegere anulată.'; return; }
+    const text = new TextDecoder().decode(o.buf);
     const scripts = [...text.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
     const scriptTotal = scripts.reduce((a,s)=>a+s.length,0);
     const htmlOnly = text.length - scriptTotal;
@@ -15698,7 +15724,7 @@ async function checkFileComposition(){
     });
     result.innerHTML = 'Fișier total: ~'+(text.length/1024).toFixed(0)+' KB · HTML/CSS: ~'+(htmlOnly/1024).toFixed(0)+' KB<br>'+lines.join('<br>');
   }catch(e){
-    result.textContent = 'Nu pot calcula aici — funcționează doar servit printr-un URL real, nu deschis local (file://).';
+    result.textContent = 'Nu pot calcula aici — funcționează servit printr-un URL real sau cu fișierul ales de pe disc.';
   }
 }
 function toggleFullscreen(){
