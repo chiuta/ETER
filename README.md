@@ -1,6 +1,6 @@
 # ETER — Enciclopedia radioamatorului
 
-**Ultima actualizare:** 11 octombrie 2026 · versiune 4.4
+**Versiune:** 4.4.1 · **Ultima actualizare:** 12 octombrie 2026
 
 Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Morse, benzi, propagare, antene, indicative, licențiere ANCOM.
 
@@ -10,7 +10,7 @@ Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Mors
 
 ## Ce este
 
-ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.4, actualizată 2026-10-11; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
+ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.4.1, actualizată 2026-10-12; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
 
 ## Funcții
 
@@ -66,6 +66,10 @@ ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections:
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
 
 ## Istoric / Changelog
+
+### 12 octombrie 2026 (v4.4.1)
+- 4.4.1 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
+- Conținutul ANCOM nu a fost modificat și nici re-verificat.
 
 ### 11 octombrie 2026 (v4.4)
 - Prefixul `YO / YP / YQ / YR` (România) a fost adăugat în lista de prefixe (căutarea „YO” dădea 0 rezultate); căutarea de prefixe acceptă și un indicativ întreg (ex. `YO3AIC` → `YO`).
