@@ -1,6 +1,6 @@
 # ETER — Enciclopedia radioamatorului
 
-**Versiune:** 4.4.1 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 4.5.0 · **Ultima actualizare:** 14 octombrie 2026
 
 Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Morse, benzi, propagare, antene, indicative, licențiere ANCOM.
 
@@ -25,6 +25,25 @@ Unelte verificate în cod / interfață:
 - Mod zi / noapte, printarea secțiunii curente, mod exersare pe ecran complet, butoane „copiază".
 - „Verifică integritatea fișierului" (SHA-256) și „Din ce e făcut fișierul".
 - „Raportează o eroare": deschide formularul GitHub Issues.
+
+## Funcții noi (v4.5.0, 14 octombrie 2026)
+
+### Ascultător Morse din microfon, versiunea 2 (§4)
+
+Rămâne **experimental**, dar acum:
+- **Detecție de ton** (implicit, căsuța „Detectare după ton”): caută singur frecvența tonului în banda 300–1500 Hz (vârf îngust în spectru, urmărit pe parcurs) și măsoară amplitudinea lui cu un filtru Goertzel pe ferestre de ~12 ms, cu pas de ~2,5 ms; ignoră zgomotul larg și vorbirea (energia trebuie să fie concentrată în ton) și folosește histerezis față de nivelul tonului. Cu căsuța debifată se păstrează metoda veche (nivel RMS față de prag).
+- **Viteză automată** (căsuța „Viteză automată”): unitatea de timp (dit) se estimează din ritmul auzit, pe ferestre locale de 13 semne, cu valori aberante excluse; cursorul WPM rămâne doar punct de plecare. Deducerea codului se refăcut la fiecare semn nou, deci un început greșit se corectează singur. Afișaj: frecvența tonului, viteza estimată (WPM) și numărul de semne.
+- Microfonul se cere **fără** suprimare de zgomot, anulare de ecou și control automat al câștigului (acestea strică tonurile pure); timpii se calculează din numărul de eșantioane audio (ScriptProcessor, rezervă: AnalyserNode), nu din cadrele de afișare.
+- Butoane noi: „Șterge textul” și „Copiază textul”.
+- **Limite reale:** se potrivește pentru aproximativ 8–25 WPM, ton curat și constant, cameră liniștită. La 30 WPM și peste, sau cu manipulare foarte neregulată, apar erori. Primele semne după pornire pot lipsi cât timp se „prinde” tonul (zeci de ms). Nu înlocuiește un decodor hardware/software dedicat; sub încărcare mare a procesorului, înregistrarea audio poate pierde eșantioane. Testat cu audio sintetic (5 viteze/frecvențe, zgomot, ritm neregulat) prin dispozitivul audio fals al Chromium, nu cu emisiuni reale în eter.
+
+### Mod examen (§17 Test de cunoștințe)
+
+Butonul „Mod examen” pornește o simulare de **exersare**: 10, 20 sau 30 de întrebări din banca existentă (respectă filtrul de categorie), cu **limită de timp opțională** (10, 20 sau 30 minute; cronometrul se bazează pe un termen, deci nu îngheață cu fila în fundal). Nu arată corect/greșit pe parcurs; poți naviga între întrebări (săgeți ←/→ sau butoanele „Sari la întrebare”), schimba răspunsurile (tastele 1–4) și termina oricând (cu confirmare dacă rămân întrebări fără răspuns, care se numără ca greșite). La final: scor, procent, detaliu pe categorii și lista greșelilor cu explicații. Răspunsurile date alimentează **repetiția spațiată** existentă (corect/greșit). **Pragul de 75% este ales de aplicație pentru exersare; nu este pragul oficial ANCOM** și rezultatul nu prezice nota la examenul real (pentru simulatorul de examen vezi examenyo.net și aplicația INDICATIV).
+
+### Transparență și copie de siguranță (fff-kit)
+
+Un clic (sau Enter) pe versiunea afișată (`v 4.5.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. ETER nu scrie singur în `localStorage`; fișierul de copie de siguranță al kitului va conține doar eventualele chei pe care le-ar crea kitul sau o versiune viitoare. Progresul testului, nivelul Koch și identitatea se salvează în continuare prin exporturile proprii ale aplicației. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
 
 ## Manual de utilizare
 
@@ -66,6 +85,9 @@ ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections:
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
 
 ## Istoric / Changelog
+
+### 14 octombrie 2026 (v4.5.0)
+- Ascultător Morse v2: detecție de ton (Goertzel), viteză automată, microfon fără procesare de voce, butoane Șterge/Copiază; mod examen în Test de cunoștințe; kit fff-kit (Transparență + copie de siguranță). Conținutul de reglementare nu s-a schimbat.
 
 ### 12 octombrie 2026 (v4.4.1)
 - 4.4.1 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație

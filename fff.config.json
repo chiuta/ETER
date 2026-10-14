@@ -1,0 +1,1 @@
+{"egressNote": "Aplicația nu încarcă nimic de pe internet. Singurul fetch este către propriul fișier, doar când pagina e servită prin URL, pentru verificarea integrității; linkurile externe (ANCOM, QRZ etc.) se deschid doar la click."}

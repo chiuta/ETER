@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "slug": "eter",
+  "name": "ETER — Enciclopedia radioamatorului",
+  "version": "4.5.0",
+  "updated": "2026-10-14",
+  "description": "Ghid complet, off-line, despre radioamatorism: coduri Q, Morse, benzi, antene, propagare, indicative, licențiere ANCOM și multe altele.",
+  "egress": [],
+  "permissions": [
+    "getUserMedia",
+    "geolocation",
+    "navigator.share",
+    "speechSynthesis",
+    "clipboard",
+    "serviceWorker",
+    "Web Crypto"
+  ],
+  "storageKeys": [],
+  "sizeBytes": 703144,
+  "sha256": "15851e90d26d657a5ae4e0f73557918aa128fe8623f7e28aa726f9d6649b9b38",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'none'",
+      "script-src": "sha256×5",
+      "style-src": "'unsafe-inline'",
+      "img-src": "'self' data: blob:",
+      "media-src": "'self' data: blob:",
+      "connect-src": "'self' data: blob:",
+      "base-uri": "'none'",
+      "form-action": "'none'",
+      "manifest-src": "'self'",
+      "worker-src": "'self'"
+    },
+    "scriptInline": "hash",
+    "connect": "'self' data: blob:"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [],
+    "pwa": {
+      "manifest": true,
+      "serviceWorker": true
+    },
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "kit": {
+    "version": "1.0.0",
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "selfSerializing": false,
+  "egressNote": "Aplicația nu încarcă nimic de pe internet. Singurul fetch este către propriul fișier, doar când pagina e servită prin URL, pentru verificarea integrității; linkurile externe (ANCOM, QRZ etc.) se deschid doar la click."
+}
