@@ -1,6 +1,6 @@
 # ETER — Enciclopedia radioamatorului
 
-**Versiune:** 4.5.0 · **Ultima actualizare:** 14 octombrie 2026
+**Versiune:** 4.6.0 · **Ultima actualizare:** 2026-10-19
 
 Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Morse, benzi, propagare, antene, indicative, licențiere ANCOM.
 
@@ -85,6 +85,9 @@ ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections:
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
 
 ## Istoric / Changelog
+
+### 19 octombrie 2026 (v4.6.0)
+- Adresa `#sec=<id>[&from=<slug>]` deschide direct o secțiune a enciclopediei (alt id, `quiz` și `morse` se ignoră); linkuri (filă nouă) spre Alfabete în secțiunile „Alfabetul fonetic” și „Codul Morse”. Nicio schimbare de conținut de reglementare.
 
 ### 14 octombrie 2026 (v4.5.0)
 - Ascultător Morse v2: detecție de ton (Goertzel), viteză automată, microfon fără procesare de voce, butoane Șterge/Copiază; mod examen în Test de cunoștințe; kit fff-kit (Transparență + copie de siguranță). Conținutul de reglementare nu s-a schimbat.
