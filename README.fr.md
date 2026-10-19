@@ -80,9 +80,9 @@ MIT — voir le fichier `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). L
 
 Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf
 
-## English summary
+## Résumé
 
-ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections: Morse trainers, Q codes, bands, propagation, antennas, callsigns, ANCOM licensing, calculators, quiz with spaced repetition). It uses no browser storage (progress is exported/imported as files) and loads no external resources; external links open only on click. The integrity check fetches its own file, so it works only over a URL.
+ETER est une encyclopédie de radioamateurs en roumain, en un seul fichier (19 sections : entraîneurs de Morse, codes Q, bandes, propagation, antennes, indicatifs, licences ANCOM, calculateurs, quiz avec répétition espacée). Il n'utilise aucun stockage du navigateur (la progression est exportée/importée sous forme de fichiers) et ne charge aucune ressource externe ; les liens externes ne s'ouvrent qu'au clic. Le contrôle d'intégrité récupère son propre fichier ; il ne fonctionne donc que via une URL.
 
 ## Audit
 
