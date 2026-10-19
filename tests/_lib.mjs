@@ -14,7 +14,7 @@ export function check(name, cond, extra) { if (cond) { passes++; console.log("  
 export function summary() { console.log(`\n${passes} reușite, ${fails} eșuate`); process.exit(fails ? 1 : 0); }
 export async function launch({w = 1280, h = 800, args = [], perm = [], bypassCSP = false, colorScheme, reducedMotion, init, file} = {}) {
   const browser = await chromium.launch({executablePath: "/opt/pw-browsers/chromium", args});
-  const ctx = await browser.newContext({viewport: {width: w, height: h}, bypassCSP, permissions: perm, colorScheme, reducedMotion, acceptDownloads: true});
+  const ctx = await browser.newContext({viewport: {width: w, height: h}, bypassCSP, permissions: perm, colorScheme, reducedMotion, acceptDownloads: true, locale: "ro-RO"});
   await ctx.route(/^https?:/, r => r.abort());
   const page = await ctx.newPage();
   const st = {errs: [], net: [], csp: []};
