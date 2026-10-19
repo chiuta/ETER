@@ -10,7 +10,7 @@ Vollständiger Leitfaden zum Amateurfunk in einer einzigen HTML-Datei: Q-Gruppen
 
 **Online-App:** https://chiuta.github.io/ETER/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

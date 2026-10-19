@@ -10,7 +10,7 @@ Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Mors
 
 **Live:** https://chiuta.github.io/ETER/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

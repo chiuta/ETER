@@ -10,7 +10,7 @@ Guía completa de la radioafición en un único archivo HTML: códigos Q, Morse,
 
 **Aplicación en línea:** https://chiuta.github.io/ETER/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 

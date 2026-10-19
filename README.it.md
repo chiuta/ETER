@@ -10,7 +10,7 @@ Guida completa al radioamatorato in un unico file HTML: codici Q, Morse, bande, 
 
 **App online:** https://chiuta.github.io/ETER/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Cos'è
 

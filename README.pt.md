@@ -10,7 +10,7 @@ Guia completo do radioamadorismo num único ficheiro HTML: códigos Q, Morse, ba
 
 **Aplicação online:** https://chiuta.github.io/ETER/
 
-![Captura de ecrã](screenshot.png)
+![Captura de ecrã](screenshot.pt.png)
 
 ## O que é
 

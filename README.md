@@ -10,7 +10,7 @@ A complete guide to amateur radio in a single HTML file: Q codes, Morse, bands, 
 
 **Live app:** https://chiuta.github.io/ETER/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

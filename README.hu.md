@@ -10,7 +10,7 @@ Teljes útmutató a rádióamatőrséghez egyetlen HTML-fájlban: Q-kódok, morz
 
 **Online alkalmazás:** https://chiuta.github.io/ETER/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 
