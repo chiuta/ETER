@@ -1,78 +1,80 @@
-# ETER — Enciclopedia radioamatorului
+# ETER — The Radio Amateur's Encyclopedia
 
-**Versiune:** 4.6.0 · **Ultima actualizare:** 2026-10-19
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Morse, benzi, propagare, antene, indicative, licențiere ANCOM.
+**Version:** 4.6.0 · **Last updated:** 2026-10-19
 
-**Live:** https://chiuta.github.io/ETER/
+A complete guide to amateur radio in a single HTML file: Q codes, Morse, bands, propagation, antennas, callsigns, ANCOM licensing.
 
-![Captura de ecran](screenshot.png)
+**Live app:** https://chiuta.github.io/ETER/
 
-## Ce este
+![Screenshot](screenshot.png)
 
-ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.4.1, actualizată 2026-10-12; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
+## What it is
 
-## Funcții
+ETER is an interactive amateur radio encyclopedia (the version shown in the app: v4.4.1, updated 2026-10-12; the figures and regulations remain those verified on 2026-08-05), organised in 19 numbered sections §0–§18. The text in the app describes it as "no server, no cloud, no account", and the content is loaded from the same HTML file.
 
-Secțiuni (meniul din stânga, ☰ pe mobil): Acasă, Istorie, Alfabetul fonetic, Coduri Q & abrevieri, Codul Morse, Benzi & spectru, Moduri de operare, Propagare, Antene, Echipamente, Calculatoare & unelte, Structura unui QSO, Indicative de apel, QSL & jurnal de trafic, Concursuri & diplome, Urgențe & utilitate publică, Devino radioamator YO, Test cunoștințe, Glosar A–Z.
+## Features
 
-Unelte verificate în cod / interfață:
-- Codul Morse: traducător text ⇄ Morse cu redare audio, ascultător Morse din microfon (marcat experimental), antrenor Koch (runde de 25 de caractere), antrenor de trimitere cu tastă simplă; export/import de nivel.
-- Calculatoare: lungimi de antenă, locator Maidenhead (cu „Folosește locația mea"), azimut și distanță (cu busolă live și overlay de cameră AR, opționale), frecvență ⇄ lungime de undă, referință S-metru / dB.
-- Simulator didactic de tendințe de propagare și indicatori solari (SFI, K-index) explicați.
-- Test de cunoștințe cu repetiție spațiată; exportul/importul progresului, al identității și al unui pachet de rezervă; generare și verificare de certificat de operator (cod QR).
-- Căutare globală în meniul din stânga (tasta `/`, sau câmpul „Caută în tot ETER”): găsește secțiuni, titluri de subsecțiuni, coduri Q, abrevieri, termeni din glosar și prefixe DX, ignoră diacriticele; Enter deschide primul rezultat, săgețile navighează lista, Esc golește câmpul. Pe mobil `/` deschide meniul.
-- Mod zi / noapte, printarea secțiunii curente, mod exersare pe ecran complet, butoane „copiază".
-- „Verifică integritatea fișierului" (SHA-256) și „Din ce e făcut fișierul".
-- „Raportează o eroare": deschide formularul GitHub Issues.
+Sections (left-hand menu, ☰ on mobile): Home, History, Phonetic alphabet, Q codes & abbreviations, Morse code, Bands & spectrum, Operating modes, Propagation, Antennas, Equipment, Calculators & tools, Structure of a QSO, Callsigns, QSL & station log, Contests & awards, Emergencies & public utility, Become a YO radio amateur, Knowledge test, A–Z glossary.
 
-## Funcții noi (v4.5.0, 14 octombrie 2026)
+Tools verified in the code / interface:
+- Morse code: text ⇄ Morse translator with audio playback, Morse listener from the microphone (marked experimental), Koch trainer (rounds of 25 characters), sending trainer with a straight key; level export/import.
+- Calculators: antenna lengths, Maidenhead locator (with "Use my location"), azimuth and distance (with a live compass and a camera AR overlay, both optional), frequency ⇄ wavelength, S-meter / dB reference.
+- Educational simulator of propagation trends, with solar indices (SFI, K-index) explained.
+- Knowledge test with spaced repetition; export/import of progress, of identity and of a backup package; generation and verification of an operator certificate (QR code).
+- Global search in the left-hand menu (the `/` key, or the "Search all of ETER" field): finds sections, subsection titles, Q codes, abbreviations, glossary terms and DX prefixes, ignores diacritics; Enter opens the first result, the arrow keys navigate the list, Esc clears the field. On mobile `/` opens the menu.
+- Day / night mode, printing of the current section, full-screen practice mode, "copy" buttons.
+- "Verify file integrity" (SHA-256) and "What the file is made of".
+- "Report an error": opens the GitHub Issues form.
 
-### Ascultător Morse din microfon, versiunea 2 (§4)
+## New features (v4.5.0, 14 October 2026)
 
-Rămâne **experimental**, dar acum:
-- **Detecție de ton** (implicit, căsuța „Detectare după ton”): caută singur frecvența tonului în banda 300–1500 Hz (vârf îngust în spectru, urmărit pe parcurs) și măsoară amplitudinea lui cu un filtru Goertzel pe ferestre de ~12 ms, cu pas de ~2,5 ms; ignoră zgomotul larg și vorbirea (energia trebuie să fie concentrată în ton) și folosește histerezis față de nivelul tonului. Cu căsuța debifată se păstrează metoda veche (nivel RMS față de prag).
-- **Viteză automată** (căsuța „Viteză automată”): unitatea de timp (dit) se estimează din ritmul auzit, pe ferestre locale de 13 semne, cu valori aberante excluse; cursorul WPM rămâne doar punct de plecare. Deducerea codului se refăcut la fiecare semn nou, deci un început greșit se corectează singur. Afișaj: frecvența tonului, viteza estimată (WPM) și numărul de semne.
-- Microfonul se cere **fără** suprimare de zgomot, anulare de ecou și control automat al câștigului (acestea strică tonurile pure); timpii se calculează din numărul de eșantioane audio (ScriptProcessor, rezervă: AnalyserNode), nu din cadrele de afișare.
-- Butoane noi: „Șterge textul” și „Copiază textul”.
-- **Limite reale:** se potrivește pentru aproximativ 8–25 WPM, ton curat și constant, cameră liniștită. La 30 WPM și peste, sau cu manipulare foarte neregulată, apar erori. Primele semne după pornire pot lipsi cât timp se „prinde” tonul (zeci de ms). Nu înlocuiește un decodor hardware/software dedicat; sub încărcare mare a procesorului, înregistrarea audio poate pierde eșantioane. Testat cu audio sintetic (5 viteze/frecvențe, zgomot, ritm neregulat) prin dispozitivul audio fals al Chromium, nu cu emisiuni reale în eter.
+### Morse listener from the microphone, version 2 (§4)
 
-### Mod examen (§17 Test de cunoștințe)
+It remains **experimental**, but now:
+- **Tone detection** (default, the "Detect by tone" checkbox): it finds the tone frequency on its own in the 300–1500 Hz band (a narrow peak in the spectrum, tracked as it goes) and measures its amplitude with a Goertzel filter on ~12 ms windows, with a ~2.5 ms step; it ignores broadband noise and speech (the energy must be concentrated in the tone) and uses hysteresis relative to the tone level. With the box unchecked the old method (RMS level against a threshold) is kept.
+- **Automatic speed** (the "Automatic speed" checkbox): the time unit (dit) is estimated from the rhythm heard, on local windows of 13 marks, with outliers excluded; the WPM slider remains only a starting point. The code decoding is redone at every new mark, so a wrong start corrects itself. Display: tone frequency, estimated speed (WPM) and number of marks.
+- The microphone is requested **without** noise suppression, echo cancellation and automatic gain control (these spoil pure tones); timings are computed from the number of audio samples (ScriptProcessor, fallback: AnalyserNode), not from display frames.
+- New buttons: "Clear text" and "Copy text".
+- **Real limits:** it is suited to roughly 8–25 WPM, a clean and steady tone, a quiet room. At 30 WPM and above, or with very irregular keying, errors occur. The first marks after starting may be missing while the tone is being "caught" (tens of ms). It does not replace a dedicated hardware/software decoder; under heavy CPU load, audio capture may drop samples. Tested with synthetic audio (5 speeds/frequencies, noise, irregular rhythm) through Chromium's fake audio device, not with real on-air signals.
 
-Butonul „Mod examen” pornește o simulare de **exersare**: 10, 20 sau 30 de întrebări din banca existentă (respectă filtrul de categorie), cu **limită de timp opțională** (10, 20 sau 30 minute; cronometrul se bazează pe un termen, deci nu îngheață cu fila în fundal). Nu arată corect/greșit pe parcurs; poți naviga între întrebări (săgeți ←/→ sau butoanele „Sari la întrebare”), schimba răspunsurile (tastele 1–4) și termina oricând (cu confirmare dacă rămân întrebări fără răspuns, care se numără ca greșite). La final: scor, procent, detaliu pe categorii și lista greșelilor cu explicații. Răspunsurile date alimentează **repetiția spațiată** existentă (corect/greșit). **Pragul de 75% este ales de aplicație pentru exersare; nu este pragul oficial ANCOM** și rezultatul nu prezice nota la examenul real (pentru simulatorul de examen vezi examenyo.net și aplicația INDICATIV).
+### Exam mode (§17 Knowledge test)
 
-### Transparență și copie de siguranță (fff-kit)
+The "Exam mode" button starts a **practice** simulation: 10, 20 or 30 questions from the existing bank (respecting the category filter), with an **optional time limit** (10, 20 or 30 minutes; the timer is based on a deadline, so it does not freeze when the tab is in the background). It does not show correct/wrong along the way; you can navigate between questions (←/→ arrows or the "Jump to question" buttons), change your answers (keys 1–4) and finish at any time (with confirmation if questions remain unanswered, which are counted as wrong). At the end: score, percentage, breakdown by category and the list of mistakes with explanations. The answers given feed the existing **spaced repetition** (correct/wrong). **The 75% threshold is chosen by the app for practice; it is not the official ANCOM threshold** and the result does not predict the grade in the real exam (for the exam simulator see examenyo.net and the INDICATIV app).
 
-Un clic (sau Enter) pe versiunea afișată (`v 4.5.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. ETER nu scrie singur în `localStorage`; fișierul de copie de siguranță al kitului va conține doar eventualele chei pe care le-ar crea kitul sau o versiune viitoare. Progresul testului, nivelul Koch și identitatea se salvează în continuare prin exporturile proprii ale aplicației. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
+### Transparency and backup (fff-kit)
 
-## Manual de utilizare
+A click (or Enter) on the displayed version (`v 4.5.0 · 2026-10-14`) opens the "Transparency" window: the declared network hosts (0 external requests), the local storage keys with sizes, the APIs used, the file's size and SHA-256 (with a verifier for a downloaded file) and the **backup** of the app's data into a `.fff.json` file (optionally encrypted with a password, AES-GCM 256 / PBKDF2; the password cannot be recovered), import with confirmation and deletion of the app's data. The kit (`fff-kit`, modules: core, label, bundle) is embedded in `index.html`, makes no network requests and does not change existing data; without it the app works the same. ETER does not write to `localStorage` itself; the kit's backup file will contain only any keys that the kit or a future version might create. Test progress, the Koch level and identity continue to be saved through the app's own exports. The kit's texts are in 8 languages (ro, en, fr, it, es, pt, hu, de); **the fr/it/es/pt/hu/de translations are automatic and not verified by native speakers**. The app's own interface remains in Romanian.
 
-1. Deschide pagina și alege o secțiune din meniul din stânga (pe mobil apasă ☰).
-2. Comută între ☾ Noapte și ☀ Zi din meniu.
-3. Pentru Morse: în §4 scrie un text în traducător și apasă „Redă audio" („Stop" oprește); pentru antrenor apasă „Începe o rundă" și „Verifică". Nivelul se salvează cu „Exportă nivelul" și se reia cu „Importă nivelul".
-4. Pentru locator: în §10 apasă „Calculează locatorul" (sau „Folosește locația mea", care cere permisiunea browserului).
-5. În §17 rezolvă testul; cu „Exportă progresul" / „Importă progresul" păstrezi rezultatele între sesiuni.
-6. Tot în §17 poți genera un certificat de operator și îl poți verifica ulterior; „Exportă identitatea" salvează identitatea locală într-un fișier.
-7. „Printează secțiunea curentă" tipărește secțiunea afișată; „Raportează o eroare" deschide GitHub Issues.
+## User guide
 
-## Confidențialitate și rețea
+1. Open the page and choose a section from the left-hand menu (on mobile press ☰).
+2. Switch between ☾ Night and ☀ Day from the menu.
+3. For Morse: in §4 type a text in the translator and press "Play audio" ("Stop" stops it); for the trainer press "Start a round" and "Check". The level is saved with "Export level" and restored with "Import level".
+4. For the locator: in §10 press "Calculate locator" (or "Use my location", which asks for the browser's permission).
+5. In §17 take the test; with "Export progress" / "Import progress" you keep results between sessions.
+6. Also in §17 you can generate an operator certificate and verify it later; "Export identity" saves the local identity to a file.
+7. "Print current section" prints the displayed section; "Report an error" opens GitHub Issues.
 
-- Local: nu am găsit utilizare de `localStorage`, `sessionStorage` sau IndexedDB în cod. Progresul, nivelul și identitatea se păstrează doar prin export/import de fișiere.
-- Rețea: textul din aplicație afirmă că nimic nu se încarcă de pe internet, iar în cod nu am găsit scripturi sau resurse externe. Singurele apeluri `fetch` sunt către propriul fișier (`location.href`), doar când pagina e servită prin URL, pentru „Verifică integritatea fișierului" și „Din ce e făcut fișierul".
-- Linkurile externe (ANCOM, QRZ, radioamator.ro, hamradio.ro, IARU R1, examenyo.net, GitHub, trom.tf etc.) se deschid doar dacă le apeși.
-- Funcții care cer permisiuni ale browserului, numai la acțiunea ta: microfon (ascultător Morse), locație, busolă/orientare și cameră (overlay AR, scanare cod QR), sinteză vocală.
-- Pagina are o politică CSP strictă (`default-src 'none'`; scripturile sunt permise doar pe hash SHA-256, fără `'unsafe-inline'`; fără conexiuni către alte domenii; doar `self`, `data:` și `blob:`).
-- Aplicația include biblioteci cu licențe proprii (de exemplu generator de coduri QR, MIT), integrate în fișier.
+## Privacy and network
 
-## Rulare locală / offline
+- Local: I found no use of `localStorage`, `sessionStorage` or IndexedDB in the code. Progress, level and identity are kept only through file export/import.
+- Network: the text in the app states that nothing is loaded from the internet, and in the code I found no external scripts or resources. The only `fetch` calls are to its own file (`location.href`), only when the page is served by URL, for "Verify file integrity" and "What the file is made of".
+- External links (ANCOM, QRZ, radioamator.ro, hamradio.ro, IARU R1, examenyo.net, GitHub, trom.tf etc.) open only if you click them.
+- Features that ask for browser permissions, only on your action: microphone (Morse listener), location, compass/orientation and camera (AR overlay, QR code scanning), speech synthesis.
+- The page has a strict CSP policy (`default-src 'none'`; scripts are allowed only by SHA-256 hash, without `'unsafe-inline'`; no connections to other domains; only `self`, `data:` and `blob:`).
+- The app includes libraries with their own licences (e.g. a QR code generator, MIT), embedded in the file.
 
-Descarcă `index.html` și deschide-l în browser. Aproape totul funcționează fără internet. „Verifică integritatea fișierului" și „Din ce e făcut fișierul" funcționează când fișierul este servit prin URL (de exemplu GitHub Pages); din `file://` (deschis de pe disc) browserul nu permite `fetch`, așa că aplicația îți cere să alegi fișierul `index.html` de pe disc și îl citește doar local (fără rețea). Atenție: se verifică fișierul ales, nu neapărat pagina deschisă acum.
+## Local / offline use
 
-## Licență
+Download `index.html` and open it in a browser. Almost everything works without internet. "Verify file integrity" and "What the file is made of" work when the file is served by URL (e.g. GitHub Pages); from `file://` (opened from disk) the browser does not allow `fetch`, so the app asks you to choose the `index.html` file from disk and reads it only locally (no network). Note: the chosen file is verified, not necessarily the page currently open.
 
-MIT — vezi fișierul `LICENSE`. © 2026 Alexandru-Ionuț Chiuță (Alexio). Bibliotecile terțe incluse în fișier își păstrează licențele proprii (de exemplu generatorul de coduri QR de Kazuhiko Arase, MIT).
+## Licence
 
-## Autor
+MIT — see the `LICENSE` file. © 2026 Alexandru-Ionuț Chiuță (Alexio). The third-party libraries included in the file keep their own licences (e.g. the QR code generator by Kazuhiko Arase, MIT).
+
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
@@ -82,32 +84,32 @@ ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections:
 
 ## Audit
 
-Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
+Audit: 2026-10-10 — verified: 0 JS errors; the only `fetch` calls are to its own file (`location.href`); there is no `localStorage`/`sessionStorage`/IndexedDB in the code, as the README states. Corrected the contrast of the "muted" colours (night and day themes). The app has no CSP meta. The ANCOM exam content is an educational summary that refers to ANCOM Decision no. 245/2017 as the official source; the generated certificates/micro-credentials are not recognised by ANCOM or by any authority (stated in the app, §17).
 
-## Istoric / Changelog
+## History / Changelog
 
-### 19 octombrie 2026 (v4.6.0)
-- Adresa `#sec=<id>[&from=<slug>]` deschide direct o secțiune a enciclopediei (alt id, `quiz` și `morse` se ignoră); linkuri (filă nouă) spre Alfabete în secțiunile „Alfabetul fonetic” și „Codul Morse”. Nicio schimbare de conținut de reglementare.
+### 19 October 2026 (v4.6.0)
+- The address `#sec=<id>[&from=<slug>]` opens a section of the encyclopedia directly (another id, `quiz` and `morse` are ignored); links (new tab) to Alphabets in the "Phonetic alphabet" and "Morse code" sections. No change to regulatory content.
 
-### 14 octombrie 2026 (v4.5.0)
-- Ascultător Morse v2: detecție de ton (Goertzel), viteză automată, microfon fără procesare de voce, butoane Șterge/Copiază; mod examen în Test de cunoștințe; kit fff-kit (Transparență + copie de siguranță). Conținutul de reglementare nu s-a schimbat.
+### 14 October 2026 (v4.5.0)
+- Morse listener v2: tone detection (Goertzel), automatic speed, microphone without voice processing, Clear/Copy buttons; exam mode in the Knowledge test; fff-kit (Transparency + backup). Regulatory content did not change.
 
-### 12 octombrie 2026 (v4.4.1)
-- 4.4.1 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
-- Conținutul ANCOM nu a fost modificat și nici re-verificat.
+### 12 October 2026 (v4.4.1)
+- 4.4.1 — 2026-10-12: the version and the date of the last update are shown in the app
+- The ANCOM content was neither modified nor re-verified.
 
-### 11 octombrie 2026 (v4.4)
-- Prefixul `YO / YP / YQ / YR` (România) a fost adăugat în lista de prefixe (căutarea „YO” dădea 0 rezultate); căutarea de prefixe acceptă și un indicativ întreg (ex. `YO3AIC` → `YO`).
-- „Verifică integritatea fișierului” și „Din ce e făcut fișierul” funcționează și din `file://`: alegi fișierul de pe disc, iar SHA-256 se calculează local; nu se mai face `fetch` de pe `file://`, deci nu mai apare eroare în consolă.
-- Conținutul ANCOM nu a fost modificat și nici re-verificat.
+### 11 October 2026 (v4.4)
+- The prefix `YO / YP / YQ / YR` (Romania) was added to the prefix list (searching "YO" gave 0 results); the prefix search also accepts a full callsign (e.g. `YO3AIC` → `YO`).
+- "Verify file integrity" and "What the file is made of" also work from `file://`: you choose the file from disk, and the SHA-256 is computed locally; `fetch` from `file://` is no longer attempted, so the console error no longer appears.
+- The ANCOM content was neither modified nor re-verified.
 
-### 11 octombrie 2026 (v4.3)
-- Căutare globală în meniu (tasta `/`): secțiuni, titluri, coduri Q, abrevieri, glosar, prefixe.
-- CSP: `script-src` pe hash SHA-256 pentru cele trei scripturi, în locul `'unsafe-inline'`.
-- Conținutul ANCOM nu a fost modificat și nici re-verificat.
+### 11 October 2026 (v4.3)
+- Global search in the menu (the `/` key): sections, titles, Q codes, abbreviations, glossary, prefixes.
+- CSP: `script-src` on SHA-256 hash for the three scripts, instead of `'unsafe-inline'`.
+- The ANCOM content was neither modified nor re-verified.
 
-### 11 octombrie 2026 (v4.2)
-- Bara mobilă este acum un reper `header`; titlul principal (h1) există pe toate secțiunile, iar titlurile din subsol sunt h2 (axe: 0 încălcări, toate secțiunile verificate la 1280 și 360 px).
-- Etichetele tabelelor derulabile sunt unice (landmark-unique).
-- Adăugat CSP strict (`default-src 'none'`).
-- Conținutul ANCOM (cifre, sesiuni de examen, Decizia 245/2017) NU a fost re-verificat la 11.10.2026: rămâne marcat explicit „verificat la 2026-08-05”; verifică pe ancom.ro.
+### 11 October 2026 (v4.2)
+- The mobile bar is now a `header` landmark; the main heading (h1) exists on all sections, and the headings in the footer are h2 (axe: 0 violations, all sections checked at 1280 and 360 px).
+- The labels of scrollable tables are unique (landmark-unique).
+- Added a strict CSP (`default-src 'none'`).
+- The ANCOM content (figures, exam sessions, Decision 245/2017) was NOT re-verified on 11.10.2026: it remains explicitly marked "verified on 2026-08-05"; check ancom.ro.
