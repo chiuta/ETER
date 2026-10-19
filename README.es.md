@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 4.6.0 · **Última actualización:** 2026-10-19
+**Versión:** 4.7.0 · **Última actualización:** 2026-10-19
+
+Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Guía completa de la radioafición en un único archivo HTML: códigos Q, Morse, bandas, propagación, antenas, indicativos, licencia ANCOM.
 

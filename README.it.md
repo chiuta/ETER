@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 4.6.0 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 4.7.0 · **Ultimo aggiornamento:** 2026-10-19
+
+Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Guida completa al radioamatorato in un unico file HTML: codici Q, Morse, bande, propagazione, antenne, nominativi, licenza ANCOM.
 

@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.6.0 · **Last updated:** 2026-10-19
+**Version:** 4.7.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 A complete guide to amateur radio in a single HTML file: Q codes, Morse, bands, propagation, antennas, callsigns, ANCOM licensing.
 
