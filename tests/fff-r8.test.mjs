@@ -20,8 +20,8 @@ console.log("1. pornire");
   check("0 pageerror/console error", st.errs.length === 0, st.errs);
   check("0 cereri de rețea", st.net.length === 0, st.net);
   check("0 violări CSP", (await page.evaluate(() => window.__csp)).length === 0);
-  check("versiune în #app-version", /^v 4\.7\.1 · 2026-10-19$/.test((await page.textContent("#app-version")).replace(/\s+/g, " ").trim()) || /4\.7\.1/.test(await page.textContent("#app-version")));
-  check("meta application-version 4.7.1", (await page.getAttribute('meta[name="application-version"]', "content")) === "4.7.1");
+  check("versiune în #app-version", /^v 4\.7\.2 · 2026-10-19$/.test((await page.textContent("#app-version")).replace(/\s+/g, " ").trim()) || /4\.7\.2/.test(await page.textContent("#app-version")));
+  check("meta application-version 4.7.2", (await page.getAttribute('meta[name="application-version"]', "content")) === "4.7.2");
   check("fără depășire orizontală 1280", (await hOverflow(page)) <= 0);
   await browser.close();
 }
