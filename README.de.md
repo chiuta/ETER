@@ -14,7 +14,9 @@ Vollständiger Leitfaden zum Amateurfunk in einer einzigen HTML-Datei: Q-Gruppen
 
 ## Was es ist
 
-ETER ist eine interaktive Enzyklopädie des Funkamateurs (in der App angezeigte Version: v4.4.1, aktualisiert am 2026-10-12; die Zahlen und Vorschriften bleiben die am 2026-08-05 überprüften), gegliedert in 19 nummerierte Abschnitte §0–§18. Der Text in der App beschreibt sie als „ohne Server, ohne Cloud, ohne Konto“, und der Inhalt wird aus derselben HTML-Datei geladen.
+ETER ist eine interaktive Enzyklopädie des Funkamateurs (in der App angezeigte Version: v4.7.2, aktualisiert am 2026-10-19; die Zahlen und Vorschriften bleiben die am 2026-08-05 überprüften), gegliedert in 19 nummerierte Abschnitte §0–§18. Der Text in der App beschreibt sie als „ohne Server, ohne Cloud, ohne Konto“, und der Inhalt wird aus derselben HTML-Datei geladen.
+
+**Sprachen:** die Abschnitte des Leitfadens (rund 400 Blöcke), die Q-Gruppen, die Abkürzungen, das Glossar, die Rufzeichenpräfixe und der Fragenkatalog mit Optionen und Erklärungen liegen in den 8 Sprachen vor; Eigennamen, Rufzeichen, Q-Gruppen und Abkürzungen als Symbole, Formeln, Morsezeichen, Namen von Contesten/Diplomen/Diensten, URLs und der Text der alten Versionsverlaufseinträge (v1.0–v4.0, auf Rumänisch) bleiben unverändert. Die Übersetzungen sind automatisch und nicht von Muttersprachlern geprüft; der Abschnitt „Funkamateur YO werden“ (ANCOM-Verfahren, Klassen, Beschluss 245/2017, Fristen, Gebühren), die Quizfragen zu den Vorschriften, der Abschnitt zu Notfunk und Gemeinwohl (ARES/RACES, Relais, NVIS) und die Sicherheitsinhalte (Antennen/HF, Dummy Load, Höchstleistung) **müssen fachlich bzw. juristisch geprüft werden**.
 
 ## Funktionen
 
@@ -47,7 +49,7 @@ Die Schaltfläche „Prüfungsmodus“ startet eine **Übungs**simulation: 10, 2
 
 ### Transparenz und Sicherung (fff-kit)
 
-Ein Klick (oder Enter) auf die angezeigte Version (`v 4.5.0 · 2026-10-14`) öffnet das Fenster „Transparenz“: die deklarierten Netzwerk-Hosts (0 externe Anfragen), die Schlüssel des lokalen Speichers mit Größen, die verwendeten APIs, Größe und SHA-256 der Datei (mit einem Prüfer für eine heruntergeladene Datei) und die **Sicherung** der App-Daten in einer `.fff.json`-Datei (optional mit Passwort verschlüsselt, AES-GCM 256 / PBKDF2; das Passwort kann nicht wiederhergestellt werden), Import mit Bestätigung und Löschen der App-Daten. Das Kit (`fff-kit`, Module: core, label, bundle) ist in `index.html` eingebettet, stellt keine Netzwerkanfragen und verändert keine vorhandenen Daten; ohne es funktioniert die App genauso. ETER schreibt nicht selbst in `localStorage`; die Sicherungsdatei des Kits enthält nur etwaige Schlüssel, die das Kit oder eine künftige Version anlegen könnte. Testfortschritt, Koch-Stufe und Identität werden weiterhin über die eigenen Exporte der App gespeichert. Die Texte des Kits liegen in 8 Sprachen vor (ro, en, fr, it, es, pt, hu, de); **die Übersetzungen fr/it/es/pt/hu/de sind automatisch und nicht von Muttersprachlern geprüft**. Die Oberfläche der App selbst bleibt auf Rumänisch.
+Ein Klick (oder Enter) auf die angezeigte Version (`v 4.5.0 · 2026-10-14`) öffnet das Fenster „Transparenz“: die deklarierten Netzwerk-Hosts (0 externe Anfragen), die Schlüssel des lokalen Speichers mit Größen, die verwendeten APIs, Größe und SHA-256 der Datei (mit einem Prüfer für eine heruntergeladene Datei) und die **Sicherung** der App-Daten in einer `.fff.json`-Datei (optional mit Passwort verschlüsselt, AES-GCM 256 / PBKDF2; das Passwort kann nicht wiederhergestellt werden), Import mit Bestätigung und Löschen der App-Daten. Das Kit (`fff-kit`, Module: core, label, bundle) ist in `index.html` eingebettet, stellt keine Netzwerkanfragen und verändert keine vorhandenen Daten; ohne es funktioniert die App genauso. ETER schreibt nicht selbst in `localStorage`; die Sicherungsdatei des Kits enthält nur etwaige Schlüssel, die das Kit oder eine künftige Version anlegen könnte. Testfortschritt, Koch-Stufe und Identität werden weiterhin über die eigenen Exporte der App gespeichert. Die Texte des Kits liegen in 8 Sprachen vor (ro, en, fr, it, es, pt, hu, de); **die Übersetzungen fr/it/es/pt/hu/de sind automatisch und nicht von Muttersprachlern geprüft**. Oberfläche und Inhalt der App liegen ebenfalls in den 8 Sprachen vor (siehe den Sprachhinweis am Anfang); die Inhaltsübersetzungen sind automatisch und nicht von Muttersprachlern geprüft.
 
 ## Anleitung
 
@@ -82,13 +84,16 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 
 ## Zusammenfassung
 
-ETER ist eine rumänischsprachige Amateurfunk-Enzyklopädie in einer einzigen Datei (19 Abschnitte: Morse-Trainer, Q-Gruppen, Bänder, Ausbreitung, Antennen, Rufzeichen, ANCOM-Lizenzierung, Rechner, Quiz mit verteilter Wiederholung). Sie nutzt keinen Browserspeicher (der Fortschritt wird als Datei exportiert/importiert) und lädt keine externen Ressourcen; externe Links öffnen sich nur per Klick. Die Integritätsprüfung ruft die eigene Datei ab und funktioniert daher nur über eine URL.
+ETER ist eine 8-sprachige Amateurfunk-Enzyklopädie in einer einzigen Datei (19 Abschnitte: Morse-Trainer, Q-Gruppen, Bänder, Ausbreitung, Antennen, Rufzeichen, ANCOM-Lizenzierung, Rechner, Quiz mit verteilter Wiederholung). Sie nutzt keinen Browserspeicher (der Fortschritt wird als Datei exportiert/importiert) und lädt keine externen Ressourcen; externe Links öffnen sich nur per Klick. Die Integritätsprüfung ruft die eigene Datei ab und funktioniert daher nur über eine URL.
 
 ## Audit
 
 Audit: 2026-10-10 — geprüft: 0 JS-Fehler; die einzigen `fetch`-Aufrufe gehen an die eigene Datei (`location.href`); im Code gibt es kein `localStorage`/`sessionStorage`/IndexedDB, wie die README erklärt. Der Kontrast der „abgeblendeten“ Farben wurde korrigiert (Nacht- und Tagdesign). Die App hat kein CSP-Meta. Der Inhalt zur ANCOM-Prüfung ist eine didaktische Zusammenfassung, die auf die ANCOM-Entscheidung Nr. 245/2017 als offizielle Quelle verweist; die erzeugten Zertifikate/Micro-Credentials werden weder von der ANCOM noch von irgendeiner Behörde anerkannt (in der App präzisiert, §17).
 
 ## Verlauf / Changelog
+
+### 2026-10-19 (v4.7.1)
+- Der gesamte lange Inhalt (rund 400 Leitfadenblöcke, Q-Gruppen, Abkürzungen, Glossar, Präfixe, die 82 Quizfragen mit Erklärungen) ist nach en, fr, it, es, pt, de, hu übersetzt; die Oberfläche der App ist nicht mehr nur auf Rumänisch. Behoben: Lange deutsche Wörter laufen bei 390 px nicht mehr aus den Überschriften.
 
 ### 19. Oktober 2026 (v4.6.0)
 - Die Adresse `#sec=<id>[&from=<slug>]` öffnet direkt einen Abschnitt der Enzyklopädie (eine andere ID, `quiz` und `morse` werden ignoriert); Links (neuer Tab) zu Alfabete in den Abschnitten „Buchstabieralphabet“ und „Morsecode“. Keine Änderung am regulatorischen Inhalt.

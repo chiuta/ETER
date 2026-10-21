@@ -14,7 +14,9 @@ Guida completa al radioamatorato in un unico file HTML: codici Q, Morse, bande, 
 
 ## Cos'è
 
-ETER è un'enciclopedia interattiva del radioamatore (versione mostrata nell'app: v4.4.1, aggiornata il 2026-10-12; le cifre e le normative restano quelle verificate al 2026-08-05), organizzata in 19 sezioni numerate §0–§18. Il testo dell'app la descrive come «senza server, senza cloud, senza account», e il contenuto viene caricato dallo stesso file HTML.
+ETER è un'enciclopedia interattiva del radioamatore (versione mostrata nell'app: v4.7.2, aggiornata il 2026-10-19; le cifre e le normative restano quelle verificate al 2026-08-05), organizzata in 19 sezioni numerate §0–§18. Il testo dell'app la descrive come «senza server, senza cloud, senza account», e il contenuto viene caricato dallo stesso file HTML.
+
+**Lingue:** le sezioni della guida (circa 400 blocchi), i codici Q, le abbreviazioni, il glossario, i prefissi dei nominativi e la banca di domande con opzioni e spiegazioni sono disponibili nelle 8 lingue; i nomi propri, i nominativi, i codici Q e le abbreviazioni come simboli, le formule, i simboli Morse, i nomi di contest/diplomi/servizi, gli URL e il corpo delle vecchie voci della cronologia (v1.0–v4.0, in rumeno) restano invariati. Le traduzioni sono automatiche, non verificate da madrelingua; la sezione «Diventare radioamatore YO» (procedura ANCOM, classi, Decisione 245/2017, termini, tasse), le domande del quiz sulla normativa, la sezione emergenze e pubblica utilità (ARES/RACES, ripetitori, NVIS) e i contenuti di sicurezza (antenne/RF, carico fittizio, potenza massima) **richiedono la revisione di uno specialista o di un giurista**.
 
 ## Funzioni
 
@@ -47,7 +49,7 @@ Il pulsante «Modalità esame» avvia una simulazione di **esercitazione**: 10, 
 
 ### Trasparenza e copia di sicurezza (fff-kit)
 
-Un clic (o Invio) sulla versione mostrata (`v 4.5.0 · 2026-10-14`) apre la finestra «Trasparenza»: gli host di rete dichiarati (0 richieste esterne), le chiavi di archiviazione locale con le dimensioni, le API usate, la dimensione e lo SHA-256 del file (con un verificatore per un file scaricato) e la **copia di sicurezza** dei dati dell'app in un file `.fff.json` (facoltativamente cifrato con password, AES-GCM 256 / PBKDF2; la password non è recuperabile), l'importazione con conferma e l'eliminazione dei dati dell'app. Il kit (`fff-kit`, moduli: core, label, bundle) è incorporato in `index.html`, non effettua richieste di rete e non modifica i dati esistenti; senza di esso l'app funziona allo stesso modo. ETER non scrive da sé in `localStorage`; il file di copia di sicurezza del kit conterrà solo le eventuali chiavi che il kit o una versione futura potrebbe creare. I progressi del test, il livello Koch e l'identità continuano a essere salvati tramite le esportazioni proprie dell'app. I testi del kit sono in 8 lingue (ro, en, fr, it, es, pt, hu, de); **le traduzioni fr/it/es/pt/hu/de sono automatiche e non verificate da madrelingua**. L'interfaccia dell'app stessa resta in romeno.
+Un clic (o Invio) sulla versione mostrata (`v 4.5.0 · 2026-10-14`) apre la finestra «Trasparenza»: gli host di rete dichiarati (0 richieste esterne), le chiavi di archiviazione locale con le dimensioni, le API usate, la dimensione e lo SHA-256 del file (con un verificatore per un file scaricato) e la **copia di sicurezza** dei dati dell'app in un file `.fff.json` (facoltativamente cifrato con password, AES-GCM 256 / PBKDF2; la password non è recuperabile), l'importazione con conferma e l'eliminazione dei dati dell'app. Il kit (`fff-kit`, moduli: core, label, bundle) è incorporato in `index.html`, non effettua richieste di rete e non modifica i dati esistenti; senza di esso l'app funziona allo stesso modo. ETER non scrive da sé in `localStorage`; il file di copia di sicurezza del kit conterrà solo le eventuali chiavi che il kit o una versione futura potrebbe creare. I progressi del test, il livello Koch e l'identità continuano a essere salvati tramite le esportazioni proprie dell'app. I testi del kit sono in 8 lingue (ro, en, fr, it, es, pt, hu, de); **le traduzioni fr/it/es/pt/hu/de sono automatiche e non verificate da madrelingua**. L'interfaccia e i contenuti dell'app sono disponibili anche nelle 8 lingue (vedi la nota sulle lingue in alto); le traduzioni dei contenuti sono automatiche, non verificate da madrelingua.
 
 ## Guida all'uso
 
@@ -82,13 +84,16 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf
 
 ## Riepilogo
 
-ETER è un'enciclopedia radioamatoriale in rumeno, in un unico file (19 sezioni: allenatori di Morse, codici Q, bande, propagazione, antenne, nominativi, licenze ANCOM, calcolatori, quiz con ripetizione dilazionata). Non usa l'archiviazione del browser (i progressi si esportano/importano come file) e non carica risorse esterne; i link esterni si aprono solo al clic. Il controllo di integrità scarica il proprio file, quindi funziona solo tramite un URL.
+ETER è un'enciclopedia radioamatoriale in 8 lingue, in un unico file (19 sezioni: allenatori di Morse, codici Q, bande, propagazione, antenne, nominativi, licenze ANCOM, calcolatori, quiz con ripetizione dilazionata). Non usa l'archiviazione del browser (i progressi si esportano/importano come file) e non carica risorse esterne; i link esterni si aprono solo al clic. Il controllo di integrità scarica il proprio file, quindi funziona solo tramite un URL.
 
 ## Audit
 
 Audit: 2026-10-10 — verificato: 0 errori JS; gli unici `fetch` sono verso il proprio file (`location.href`); non c'è `localStorage`/`sessionStorage`/IndexedDB nel codice, come afferma il README. Corretto il contrasto dei colori «attenuati» (temi notte e giorno). L'app non ha meta CSP. Il contenuto sull'esame ANCOM è un riepilogo didattico che rimanda alla Decisione ANCOM n. 245/2017 come fonte ufficiale; gli attestati/microcredenziali generati non sono riconosciuti dall'ANCOM né da alcuna autorità (precisato nell'app, §17).
 
 ## Cronologia / Changelog
+
+### 2026-10-19 (v4.7.1)
+- Tutto il contenuto lungo (circa 400 blocchi di guida, codici Q, abbreviazioni, glossario, prefissi, le 82 domande del quiz con spiegazioni) è tradotto in en, fr, it, es, pt, de, hu; l'interfaccia dell'app non è più solo in rumeno. Corretto: le lunghe parole tedesche non escono più dai titoli a 390 px.
 
 ### 19 ottobre 2026 (v4.6.0)
 - L'indirizzo `#sec=<id>[&from=<slug>]` apre direttamente una sezione dell'enciclopedia (un altro id, `quiz` e `morse` vengono ignorati); link (nuova scheda) verso Alfabete nelle sezioni «Alfabeto fonetico» e «Codice Morse». Nessuna modifica al contenuto normativo.

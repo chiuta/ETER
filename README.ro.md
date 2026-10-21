@@ -14,7 +14,9 @@ Ghid complet despre radioamatorism, într-un singur fișier HTML: coduri Q, Mors
 
 ## Ce este
 
-ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.4.1, actualizată 2026-10-12; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
+ETER este o enciclopedie interactivă a radioamatorului (versiunea afișată în aplicație: v4.7.2, actualizată 2026-10-19; cifrele și regulamentele rămân cele verificate la 2026-08-05), organizată în 19 secțiuni numerotate §0–§18. Textul din aplicație o descrie ca „fără server, fără cloud, fără cont", iar conținutul se încarcă din același fișier HTML.
+
+**Limbi:** secțiunile ghidului (circa 400 de blocuri), codurile Q, abrevierile, glosarul, prefixele de indicative și banca de întrebări cu variante și explicații sunt disponibile în cele 8 limbi; numele proprii, indicativele, codurile Q și abrevierile ca simboluri, formulele, simbolurile Morse, numele concursurilor/diplomelor/serviciilor, adresele URL și corpul intrărilor vechi din istoricul versiunilor (v1.0–v4.0, în română) rămân neschimbate. Traducerile sunt automate, neverificate de vorbitori nativi; secțiunea „Devino radioamator YO” (procedura ANCOM, clase, Decizia 245/2017, termene, taxe), întrebările de quiz de reglementare, secțiunea de urgențe și utilitate publică (ARES/RACES, repetoare, NVIS) și conținutul de siguranță (antene/RF, sarcină fictivă, putere maximă) **necesită revizie de specialitate sau juridică**.
 
 ## Funcții
 
@@ -47,7 +49,7 @@ Butonul „Mod examen” pornește o simulare de **exersare**: 10, 20 sau 30 de 
 
 ### Transparență și copie de siguranță (fff-kit)
 
-Un clic (sau Enter) pe versiunea afișată (`v 4.5.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. ETER nu scrie singur în `localStorage`; fișierul de copie de siguranță al kitului va conține doar eventualele chei pe care le-ar crea kitul sau o versiune viitoare. Progresul testului, nivelul Koch și identitatea se salvează în continuare prin exporturile proprii ale aplicației. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața aplicației însăși rămâne în română.
+Un clic (sau Enter) pe versiunea afișată (`v 4.5.0 · 2026-10-14`) deschide fereastra „Transparență”: gazdele de rețea declarate (0 cereri externe), cheile de stocare locală cu dimensiuni, API-urile folosite, mărimea și SHA-256 al fișierului (cu verificator pentru un fișier descărcat) și **copia de siguranță** a datelor aplicației într-un fișier `.fff.json` (opțional criptat cu parolă, AES-GCM 256 / PBKDF2; parola nu poate fi recuperată), import cu confirmare și ștergerea datelor aplicației. Kitul (`fff-kit`, module: core, label, bundle) este lipit în `index.html`, nu face cereri de rețea și nu schimbă datele existente; fără el aplicația funcționează la fel. ETER nu scrie singur în `localStorage`; fișierul de copie de siguranță al kitului va conține doar eventualele chei pe care le-ar crea kitul sau o versiune viitoare. Progresul testului, nivelul Koch și identitatea se salvează în continuare prin exporturile proprii ale aplicației. Textele kitului sunt în 8 limbi (ro, en, fr, it, es, pt, hu, de); **traducerile fr/it/es/pt/hu/de sunt automate și neverificate nativ**. Interfața și conținutul aplicației sunt disponibile și în cele 8 limbi (vezi nota despre limbi de la început); traducerile conținutului sunt automate, neverificate de vorbitori nativi.
 
 ## Manual de utilizare
 
@@ -82,13 +84,16 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## Rezumat
 
-ETER este o enciclopedie de radioamatorism într-un singur fișier, în limba română (19 secțiuni: antrenori de Morse, coduri Q, benzi, propagare, antene, indicative, autorizare ANCOM, calculatoare, test cu repetiție spațiată). Nu folosește stocarea browserului (progresul se exportă/importă ca fișiere) și nu încarcă resurse externe; linkurile externe se deschid doar la clic. Verificarea de integritate își descarcă propriul fișier, deci funcționează doar printr-un URL.
+ETER este o enciclopedie de radioamatorism într-un singur fișier, în 8 limbi (19 secțiuni: antrenori de Morse, coduri Q, benzi, propagare, antene, indicative, autorizare ANCOM, calculatoare, test cu repetiție spațiată). Nu folosește stocarea browserului (progresul se exportă/importă ca fișiere) și nu încarcă resurse externe; linkurile externe se deschid doar la clic. Verificarea de integritate își descarcă propriul fișier, deci funcționează doar printr-un URL.
 
 ## Audit
 
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
 
 ## Istoric / Changelog
+
+### 2026-10-19 (v4.7.1)
+- Tot conținutul lung (circa 400 de blocuri de ghid, coduri Q, abrevieri, glosar, prefixe, cele 82 de întrebări de quiz cu explicații) este tradus în en, fr, it, es, pt, de, hu; interfața aplicației nu mai este doar în română. Corectat: cuvintele germane lungi nu mai depășesc titlurile la 390 px.
 
 ### 19 octombrie 2026 (v4.6.0)
 - Adresa `#sec=<id>[&from=<slug>]` deschide direct o secțiune a enciclopediei (alt id, `quiz` și `morse` se ignoră); linkuri (filă nouă) spre Alfabete în secțiunile „Alfabetul fonetic” și „Codul Morse”. Nicio schimbare de conținut de reglementare.

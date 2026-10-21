@@ -14,7 +14,9 @@ A complete guide to amateur radio in a single HTML file: Q codes, Morse, bands, 
 
 ## What it is
 
-ETER is an interactive amateur radio encyclopedia (the version shown in the app: v4.4.1, updated 2026-10-12; the figures and regulations remain those verified on 2026-08-05), organised in 19 numbered sections §0–§18. The text in the app describes it as "no server, no cloud, no account", and the content is loaded from the same HTML file.
+ETER is an interactive amateur radio encyclopedia (the version shown in the app: v4.7.2, updated 2026-10-19; the figures and regulations remain those verified on 2026-08-05), organised in 19 numbered sections §0–§18. The text in the app describes it as "no server, no cloud, no account", and the content is loaded from the same HTML file.
+
+**Languages:** the guide sections (about 400 blocks), the Q codes, the abbreviations, the glossary, the callsign prefixes and the question bank with options and explanations are available in the 8 languages; proper names, callsigns, Q codes and abbreviations as symbols, formulas, Morse symbols, the names of contests/diplomas/services, URLs, and the bodies of the old version-history entries (v1.0–v4.0, in Romanian) remain as they are. The translations are automatic and not verified by native speakers; the "Become a YO radio amateur" section (ANCOM procedure, classes, Decision 245/2017, deadlines, fees), the regulation quiz questions, the emergency/public-service section (ARES/RACES, repeaters, NVIS) and the safety content (antennas/RF, dummy load, maximum power) **need specialist or legal review**.
 
 ## Features
 
@@ -47,7 +49,7 @@ The "Exam mode" button starts a **practice** simulation: 10, 20 or 30 questions 
 
 ### Transparency and backup (fff-kit)
 
-A click (or Enter) on the displayed version (`v 4.5.0 · 2026-10-14`) opens the "Transparency" window: the declared network hosts (0 external requests), the local storage keys with sizes, the APIs used, the file's size and SHA-256 (with a verifier for a downloaded file) and the **backup** of the app's data into a `.fff.json` file (optionally encrypted with a password, AES-GCM 256 / PBKDF2; the password cannot be recovered), import with confirmation and deletion of the app's data. The kit (`fff-kit`, modules: core, label, bundle) is embedded in `index.html`, makes no network requests and does not change existing data; without it the app works the same. ETER does not write to `localStorage` itself; the kit's backup file will contain only any keys that the kit or a future version might create. Test progress, the Koch level and identity continue to be saved through the app's own exports. The kit's texts are in 8 languages (ro, en, fr, it, es, pt, hu, de); **the fr/it/es/pt/hu/de translations are automatic and not verified by native speakers**. The app's own interface remains in Romanian.
+A click (or Enter) on the displayed version (`v 4.5.0 · 2026-10-14`) opens the "Transparency" window: the declared network hosts (0 external requests), the local storage keys with sizes, the APIs used, the file's size and SHA-256 (with a verifier for a downloaded file) and the **backup** of the app's data into a `.fff.json` file (optionally encrypted with a password, AES-GCM 256 / PBKDF2; the password cannot be recovered), import with confirmation and deletion of the app's data. The kit (`fff-kit`, modules: core, label, bundle) is embedded in `index.html`, makes no network requests and does not change existing data; without it the app works the same. ETER does not write to `localStorage` itself; the kit's backup file will contain only any keys that the kit or a future version might create. Test progress, the Koch level and identity continue to be saved through the app's own exports. The kit's texts are in 8 languages (ro, en, fr, it, es, pt, hu, de); **the fr/it/es/pt/hu/de translations are automatic and not verified by native speakers**. The app's own interface and content are also available in the 8 languages (see the language note near the top); the content translations are automatic and not verified by native speakers.
 
 ## User guide
 
@@ -82,13 +84,16 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## English summary
 
-ETER is a single-file Romanian-language amateur radio encyclopedia (19 sections: Morse trainers, Q codes, bands, propagation, antennas, callsigns, ANCOM licensing, calculators, quiz with spaced repetition). It uses no browser storage (progress is exported/imported as files) and loads no external resources; external links open only on click. The integrity check fetches its own file, so it works only over a URL.
+ETER is a single-file 8-language amateur radio encyclopedia (19 sections: Morse trainers, Q codes, bands, propagation, antennas, callsigns, ANCOM licensing, calculators, quiz with spaced repetition). It uses no browser storage (progress is exported/imported as files) and loads no external resources; external links open only on click. The integrity check fetches its own file, so it works only over a URL.
 
 ## Audit
 
 Audit: 2026-10-10 — verified: 0 JS errors; the only `fetch` calls are to its own file (`location.href`); there is no `localStorage`/`sessionStorage`/IndexedDB in the code, as the README states. Corrected the contrast of the "muted" colours (night and day themes). The app has no CSP meta. The ANCOM exam content is an educational summary that refers to ANCOM Decision no. 245/2017 as the official source; the generated certificates/micro-credentials are not recognised by ANCOM or by any authority (stated in the app, §17).
 
 ## History / Changelog
+
+### 2026-10-19 (v4.7.1)
+- All the long content (about 400 guide blocks, Q codes, abbreviations, glossary, prefixes, the 82 quiz questions with explanations) translated into en, fr, it, es, pt, de, hu; the app's interface is no longer only Romanian. Fix: long German words no longer overflow the headings at 390 px.
 
 ### 19 October 2026 (v4.6.0)
 - The address `#sec=<id>[&from=<slug>]` opens a section of the encyclopedia directly (another id, `quiz` and `morse` are ignored); links (new tab) to Alphabets in the "Phonetic alphabet" and "Morse code" sections. No change to regulatory content.

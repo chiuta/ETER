@@ -14,7 +14,9 @@ Guía completa de la radioafición en un único archivo HTML: códigos Q, Morse,
 
 ## Qué es
 
-ETER es una enciclopedia interactiva del radioaficionado (versión mostrada en la aplicación: v4.4.1, actualizada el 2026-10-12; las cifras y los reglamentos siguen siendo los verificados a 2026-08-05), organizada en 19 secciones numeradas §0–§18. El texto de la aplicación la describe como «sin servidor, sin nube, sin cuenta», y el contenido se carga desde el mismo archivo HTML.
+ETER es una enciclopedia interactiva del radioaficionado (versión mostrada en la aplicación: v4.7.2, actualizada el 2026-10-19; las cifras y los reglamentos siguen siendo los verificados a 2026-08-05), organizada en 19 secciones numeradas §0–§18. El texto de la aplicación la describe como «sin servidor, sin nube, sin cuenta», y el contenido se carga desde el mismo archivo HTML.
+
+**Idiomas:** las secciones de la guía (unos 400 bloques), los códigos Q, las abreviaturas, el glosario, los prefijos de indicativos y el banco de preguntas con opciones y explicaciones están disponibles en los 8 idiomas; los nombres propios, los indicativos, los códigos Q y abreviaturas como símbolos, las fórmulas, los símbolos Morse, los nombres de concursos/diplomas/servicios, las URL y el cuerpo de las entradas antiguas del historial (v1.0–v4.0, en rumano) permanecen sin cambios. Las traducciones son automáticas, no verificadas por hablantes nativos; la sección «Hazte radioaficionado YO» (procedimiento ANCOM, clases, Decisión 245/2017, plazos, tasas), las preguntas del cuestionario sobre normativa, la sección de emergencias y utilidad pública (ARES/RACES, repetidores, NVIS) y el contenido de seguridad (antenas/RF, carga ficticia, potencia máxima) **requieren revisión especializada o jurídica**.
 
 ## Funciones
 
@@ -47,7 +49,7 @@ El botón «Modo examen» inicia una simulación de **práctica**: 10, 20 o 30 p
 
 ### Transparencia y copia de seguridad (fff-kit)
 
-Un clic (o Intro) en la versión mostrada (`v 4.5.0 · 2026-10-14`) abre la ventana «Transparencia»: los hosts de red declarados (0 solicitudes externas), las claves de almacenamiento local con sus tamaños, las API utilizadas, el tamaño y el SHA-256 del archivo (con un verificador para un archivo descargado) y la **copia de seguridad** de los datos de la aplicación en un archivo `.fff.json` (opcionalmente cifrado con contraseña, AES-GCM 256 / PBKDF2; la contraseña no se puede recuperar), la importación con confirmación y el borrado de los datos de la aplicación. El kit (`fff-kit`, módulos: core, label, bundle) está integrado en `index.html`, no realiza solicitudes de red y no modifica los datos existentes; sin él, la aplicación funciona igual. ETER no escribe por sí misma en `localStorage`; el archivo de copia de seguridad del kit contendrá solo las posibles claves que el kit o una versión futura pudieran crear. El progreso de la prueba, el nivel Koch y la identidad se siguen guardando mediante las exportaciones propias de la aplicación. Los textos del kit están en 8 idiomas (ro, en, fr, it, es, pt, hu, de); **las traducciones fr/it/es/pt/hu/de son automáticas y no han sido verificadas por hablantes nativos**. La interfaz de la propia aplicación sigue en rumano.
+Un clic (o Intro) en la versión mostrada (`v 4.5.0 · 2026-10-14`) abre la ventana «Transparencia»: los hosts de red declarados (0 solicitudes externas), las claves de almacenamiento local con sus tamaños, las API utilizadas, el tamaño y el SHA-256 del archivo (con un verificador para un archivo descargado) y la **copia de seguridad** de los datos de la aplicación en un archivo `.fff.json` (opcionalmente cifrado con contraseña, AES-GCM 256 / PBKDF2; la contraseña no se puede recuperar), la importación con confirmación y el borrado de los datos de la aplicación. El kit (`fff-kit`, módulos: core, label, bundle) está integrado en `index.html`, no realiza solicitudes de red y no modifica los datos existentes; sin él, la aplicación funciona igual. ETER no escribe por sí misma en `localStorage`; el archivo de copia de seguridad del kit contendrá solo las posibles claves que el kit o una versión futura pudieran crear. El progreso de la prueba, el nivel Koch y la identidad se siguen guardando mediante las exportaciones propias de la aplicación. Los textos del kit están en 8 idiomas (ro, en, fr, it, es, pt, hu, de); **las traducciones fr/it/es/pt/hu/de son automáticas y no han sido verificadas por hablantes nativos**. La interfaz y el contenido de la aplicación también están disponibles en los 8 idiomas (véase la nota sobre idiomas al principio); las traducciones del contenido son automáticas, no verificadas por hablantes nativos.
 
 ## Guía de uso
 
@@ -82,13 +84,16 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf
 
 ## Resumen
 
-ETER es una enciclopedia de radioafición de un único archivo, en rumano (19 secciones: entrenadores de Morse, códigos Q, bandas, propagación, antenas, indicativos, licencias ANCOM, calculadoras, cuestionario con repetición espaciada). No usa almacenamiento del navegador (el progreso se exporta/importa como archivos) y no carga recursos externos; los enlaces externos se abren solo al hacer clic. La comprobación de integridad obtiene su propio archivo, por lo que solo funciona a través de una URL.
+ETER es una enciclopedia de radioafición de un único archivo, en 8 idiomas (19 secciones: entrenadores de Morse, códigos Q, bandas, propagación, antenas, indicativos, licencias ANCOM, calculadoras, cuestionario con repetición espaciada). No usa almacenamiento del navegador (el progreso se exporta/importa como archivos) y no carga recursos externos; los enlaces externos se abren solo al hacer clic. La comprobación de integridad obtiene su propio archivo, por lo que solo funciona a través de una URL.
 
 ## Auditoría
 
 Auditoría: 2026-10-10 — verificado: 0 errores de JS; los únicos `fetch` son a su propio archivo (`location.href`); no hay `localStorage`/`sessionStorage`/IndexedDB en el código, como afirma el README. Corregido el contraste de los colores «atenuados» (temas noche y día). La aplicación no tiene meta CSP. El contenido sobre el examen de ANCOM es un resumen didáctico que remite a la Decisión de ANCOM n.º 245/2017 como fuente oficial; los certificados/microcredenciales generados no están reconocidos por ANCOM ni por ninguna autoridad (precisado en la aplicación, §17).
 
 ## Historial / Changelog
+
+### 2026-10-19 (v4.7.1)
+- Todo el contenido largo (unos 400 bloques de guía, códigos Q, abreviaturas, glosario, prefijos, las 82 preguntas del cuestionario con explicaciones) está traducido a en, fr, it, es, pt, de, hu; la interfaz de la aplicación ya no está solo en rumano. Corregido: las palabras alemanas largas ya no desbordan los títulos a 390 px.
 
 ### 19 de octubre de 2026 (v4.6.0)
 - La dirección `#sec=<id>[&from=<slug>]` abre directamente una sección de la enciclopedia (otro id, `quiz` y `morse` se ignoran); enlaces (pestaña nueva) a Alfabete en las secciones «Alfabeto fonético» y «Código Morse». Ningún cambio en el contenido normativo.

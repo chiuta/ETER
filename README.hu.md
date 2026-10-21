@@ -14,7 +14,9 @@ Teljes útmutató a rádióamatőrséghez egyetlen HTML-fájlban: Q-kódok, morz
 
 ## Mi ez
 
-Az ETER a rádióamatőr interaktív enciklopédiája (az alkalmazásban megjelenített verzió: v4.4.1, frissítve 2026-10-12-én; a számadatok és a szabályozások a 2026-08-05-én ellenőrzöttek maradnak), 19 számozott szakaszba rendezve: §0–§18. Az alkalmazás szövege „szerver nélkül, felhő nélkül, fiók nélkül” jellemzi, a tartalom pedig ugyanabból a HTML-fájlból töltődik be.
+Az ETER a rádióamatőr interaktív enciklopédiája (az alkalmazásban megjelenített verzió: v4.7.2, frissítve 2026-10-19-én; a számadatok és a szabályozások a 2026-08-05-én ellenőrzöttek maradnak), 19 számozott szakaszba rendezve: §0–§18. Az alkalmazás szövege „szerver nélkül, felhő nélkül, fiók nélkül” jellemzi, a tartalom pedig ugyanabból a HTML-fájlból töltődik be.
+
+**Nyelvek:** az útmutató szakaszai (kb. 400 blokk), a Q-kódok, a rövidítések, a szójegyzék, a hívójel-előtagok és a kérdésbank válaszlehetőségekkel és magyarázatokkal mind a 8 nyelven elérhető; a tulajdonnevek, a hívójelek, a Q-kódok és rövidítések mint szimbólumok, a képletek, a morzejelek, a versenyek/oklevelek/szolgáltatások nevei, az URL-ek és a régi verziótörténeti bejegyzések szövege (v1.0–v4.0, románul) változatlanul marad. A fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték; a „Légy YO rádióamatőr” szakasz (ANCOM-eljárás, osztályok, a 245/2017. sz. határozat, határidők, díjak), a szabályozási kvízkérdések, a veszélyhelyzeti és közcélú szakasz (ARES/RACES, átjátszók, NVIS) és a biztonsági tartalom (antennák/RF, műterhelés, maximális teljesítmény) **szakmai vagy jogi felülvizsgálatot igényel**.
 
 ## Funkciók
 
@@ -47,7 +49,7 @@ A „Vizsgamód” gomb **gyakorló** szimulációt indít: 10, 20 vagy 30 kérd
 
 ### Átláthatóság és biztonsági mentés (fff-kit)
 
-A megjelenített verzióra (`v 4.5.0 · 2026-10-14`) kattintva (vagy Entert nyomva) megnyílik az „Átláthatóság” ablak: a deklarált hálózati gazdagépek (0 külső kérés), a helyi tárolás kulcsai méretekkel, a használt API-k, a fájl mérete és SHA-256 értéke (letöltött fájl ellenőrzőjével), valamint az alkalmazás adatainak **biztonsági mentése** egy `.fff.json` fájlba (opcionálisan jelszóval titkosítva, AES-GCM 256 / PBKDF2; a jelszó nem állítható vissza), importálás megerősítéssel és az alkalmazás adatainak törlése. A kit (`fff-kit`, modulok: core, label, bundle) be van ágyazva az `index.html` fájlba, nem végez hálózati kéréseket, és nem módosítja a meglévő adatokat; nélküle az alkalmazás ugyanígy működik. Az ETER maga nem ír a `localStorage`-ba; a kit biztonsági mentési fájlja csak azokat az esetleges kulcsokat fogja tartalmazni, amelyeket a kit vagy egy jövőbeli verzió létrehozhat. A teszt haladása, a Koch-szint és az azonosság továbbra is az alkalmazás saját exportjain keresztül mentődik. A kit szövegei 8 nyelven vannak (ro, en, fr, it, es, pt, hu, de); **az fr/it/es/pt/hu/de fordítások automatikusak, és anyanyelvi beszélők nem ellenőrizték őket**. Maga az alkalmazás felülete román marad.
+A megjelenített verzióra (`v 4.5.0 · 2026-10-14`) kattintva (vagy Entert nyomva) megnyílik az „Átláthatóság” ablak: a deklarált hálózati gazdagépek (0 külső kérés), a helyi tárolás kulcsai méretekkel, a használt API-k, a fájl mérete és SHA-256 értéke (letöltött fájl ellenőrzőjével), valamint az alkalmazás adatainak **biztonsági mentése** egy `.fff.json` fájlba (opcionálisan jelszóval titkosítva, AES-GCM 256 / PBKDF2; a jelszó nem állítható vissza), importálás megerősítéssel és az alkalmazás adatainak törlése. A kit (`fff-kit`, modulok: core, label, bundle) be van ágyazva az `index.html` fájlba, nem végez hálózati kéréseket, és nem módosítja a meglévő adatokat; nélküle az alkalmazás ugyanígy működik. Az ETER maga nem ír a `localStorage`-ba; a kit biztonsági mentési fájlja csak azokat az esetleges kulcsokat fogja tartalmazni, amelyeket a kit vagy egy jövőbeli verzió létrehozhat. A teszt haladása, a Koch-szint és az azonosság továbbra is az alkalmazás saját exportjain keresztül mentődik. A kit szövegei 8 nyelven vannak (ro, en, fr, it, es, pt, hu, de); **az fr/it/es/pt/hu/de fordítások automatikusak, és anyanyelvi beszélők nem ellenőrizték őket**. Az alkalmazás felülete és tartalma szintén elérhető a 8 nyelven (lásd az elején a nyelvi megjegyzést); a tartalom fordításai automatikusak, anyanyelvi beszélők nem ellenőrizték.
 
 ## Használati útmutató
 
@@ -81,13 +83,16 @@ MIT — lásd a `LICENSE` fájlt. © 2026 Alexandru-Ionuț Chiuță (Alexio). A 
 Alexio — Alexandru-Ionuț Chiuță, elérhetőség: alexio@trom.tf
 
 ## Összefoglaló
-Az ETER egyfájlos, román nyelvű rádióamatőr-enciklopédia (19 szakasz: morze-gyakorlók, Q-kódok, sávok, terjedés, antennák, hívójelek, ANCOM-engedélyezés, számológépek, kvíz időzített ismétléssel). Nem használ böngészőtárolót (a haladás fájlként exportálható/importálható), és nem tölt be külső erőforrásokat; a külső hivatkozások csak kattintásra nyílnak meg. Az integritásellenőrzés a saját fájlját kéri le, ezért csak URL-en keresztül működik.
+Az ETER egyfájlos, 8 nyelvű rádióamatőr-enciklopédia (19 szakasz: morze-gyakorlók, Q-kódok, sávok, terjedés, antennák, hívójelek, ANCOM-engedélyezés, számológépek, kvíz időzített ismétléssel). Nem használ böngészőtárolót (a haladás fájlként exportálható/importálható), és nem tölt be külső erőforrásokat; a külső hivatkozások csak kattintásra nyílnak meg. Az integritásellenőrzés a saját fájlját kéri le, ezért csak URL-en keresztül működik.
 
 ## Audit
 
 Audit: 2026-10-10 — ellenőrizve: 0 JS-hiba; az egyetlen `fetch` hívások a saját fájlra irányulnak (`location.href`); a kódban nincs `localStorage`/`sessionStorage`/IndexedDB, ahogy a README állítja. Kijavítva a „tompított” színek kontrasztja (éjszakai és nappali téma). Az alkalmazásnak nincs CSP meta eleme. Az ANCOM-vizsgára vonatkozó tartalom didaktikai összefoglaló, amely hivatalos forrásként az ANCOM 245/2017. sz. határozatára utal; a létrehozott tanúsítványokat/mikrotanúsítványokat sem az ANCOM, sem semmilyen hatóság nem ismeri el (az alkalmazásban pontosítva, §17).
 
 ## Előzmények / Changelog
+
+### 2026-10-19 (v4.7.1)
+- Az összes hosszú tartalom (kb. 400 útmutatóblokk, Q-kódok, rövidítések, szójegyzék, előtagok, a 82 kvízkérdés magyarázatokkal) le van fordítva en, fr, it, es, pt, de, hu nyelvre; az alkalmazás felülete már nem csak román. Javítva: a hosszú német szavak 390 px-en már nem lógnak ki a címsorokból.
 
 ### 2026. október 19. (v4.6.0)
 - A `#sec=<id>[&from=<slug>]` cím közvetlenül megnyitja az enciklopédia egy szakaszát (más azonosító, a `quiz` és a `morse` figyelmen kívül marad); hivatkozások (új lapon) az Alfabete-re a „Fonetikus ábécé” és a „Morze-kód” szakaszokban. A szabályozási tartalom nem változott.
