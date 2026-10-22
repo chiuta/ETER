@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 4.7.4 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 4.7.5 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -90,6 +90,10 @@ Az ETER egyfájlos, 8 nyelvű rádióamatőr-enciklopédia (19 szakasz: morze-gy
 Audit: 2026-10-10 — ellenőrizve: 0 JS-hiba; az egyetlen `fetch` hívások a saját fájlra irányulnak (`location.href`); a kódban nincs `localStorage`/`sessionStorage`/IndexedDB, ahogy a README állítja. Kijavítva a „tompított” színek kontrasztja (éjszakai és nappali téma). Az alkalmazásnak nincs CSP meta eleme. Az ANCOM-vizsgára vonatkozó tartalom didaktikai összefoglaló, amely hivatalos forrásként az ANCOM 245/2017. sz. határozatára utal; a létrehozott tanúsítványokat/mikrotanúsítványokat sem az ANCOM, sem semmilyen hatóság nem ismeri el (az alkalmazásban pontosítva, §17).
 
 ## Előzmények / Changelog
+
+### 4.7.5 — 2026-10-22
+
+fff-kit 1.1.2: PBKDF2 600 000 iterációval, clickjacking elleni védelem.
 
 - 4.7.4 — 2026-10-22: Mobil: minden szöveg legalább 12 px (korábban több mint 150 helyen 10-11,5 px volt); a lábléc hivatkozásai és a „régebbi verziók” kapcsolók nagyobb érintési felületűek.
 - 4.7.3 — 2026-10-22: **javítás**: a lábléc szerzői hivatkozása (TROM — trade-free projekt) mostantól minden nyelven le van fordítva.

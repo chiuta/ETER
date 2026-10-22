@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 4.7.4 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 4.7.5 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -91,6 +91,10 @@ ETER este o enciclopedie de radioamatorism într-un singur fișier, în 8 limbi 
 Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propriul fișier (`location.href`); nu există `localStorage`/`sessionStorage`/IndexedDB în cod, cum afirmă README. Corectat contrastul culorilor „estompate” (tema de noapte și cea de zi). Aplicația nu are meta CSP. Conținutul despre examenul ANCOM este un rezumat didactic care trimite la Decizia ANCOM nr. 245/2017 ca sursă oficială; certificatele/microcredențialele generate nu sunt recunoscute de ANCOM sau de vreo autoritate (precizat în aplicație, §17).
 
 ## Istoric / Changelog
+
+### 4.7.5 — 2026-10-22
+
+fff-kit 1.1.2: PBKDF2 600 000 iterații, protecție anti-clickjacking.
 
 - 4.7.4 — 2026-10-22: Mobil: tot textul are minimum 12 px (era 10-11,5 px în peste 150 de locuri); linkurile din subsol și comutatoarele „versiuni mai vechi” au o zonă de atingere mai mare.
 - 4.7.3 — 2026-10-22: **remediere**: legătura autorului din subsol (TROM — proiect trade-free) este acum tradusă în toate limbile.

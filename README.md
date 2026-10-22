@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.7.4 · **Last updated:** 2026-10-22
+**Version:** 4.7.5 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -91,6 +91,10 @@ ETER is a single-file 8-language amateur radio encyclopedia (19 sections: Morse 
 Audit: 2026-10-10 — verified: 0 JS errors; the only `fetch` calls are to its own file (`location.href`); there is no `localStorage`/`sessionStorage`/IndexedDB in the code, as the README states. Corrected the contrast of the "muted" colours (night and day themes). The app has no CSP meta. The ANCOM exam content is an educational summary that refers to ANCOM Decision no. 245/2017 as the official source; the generated certificates/micro-credentials are not recognised by ANCOM or by any authority (stated in the app, §17).
 
 ## History / Changelog
+
+### 4.7.5 — 2026-10-22
+
+fff-kit 1.1.2: PBKDF2 with 600,000 iterations, anti-clickjacking protection.
 
 - 4.7.4 — 2026-10-22: Mobile: all text raised to at least 12 px (it was 10-11.5 px in 150+ places); footer links and the "older versions" toggles have a larger tap area.
 - 4.7.3 — 2026-10-22: **fix**: the author link in the footer (TROM — trade-free project) is now translated in every language.
