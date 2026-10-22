@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 4.7.2 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 4.7.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -91,6 +91,7 @@ Audit: 2026-10-10 — ellenőrizve: 0 JS-hiba; az egyetlen `fetch` hívások a s
 
 ## Előzmények / Changelog
 
+- 4.7.3 — 2026-10-22: **javítás**: a lábléc szerzői hivatkozása (TROM — trade-free projekt) mostantól minden nyelven le van fordítva.
 ### 2026-10-19 (v4.7.1)
 - Az összes hosszú tartalom (kb. 400 útmutatóblokk, Q-kódok, rövidítések, szójegyzék, előtagok, a 82 kvízkérdés magyarázatokkal) le van fordítva en, fr, it, es, pt, de, hu nyelvre; az alkalmazás felülete már nem csak román. Javítva: a hosszú német szavak 390 px-en már nem lógnak ki a címsorokból.
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 4.7.2 · **Última atualização:** 2026-10-19
+**Versão:** 4.7.3 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -92,6 +92,7 @@ Auditoria: 2026-10-10 — verificado: 0 erros de JS; os únicos `fetch` são ao 
 
 ## Histórico / Changelog
 
+- 4.7.3 — 2026-10-22: **correção**: a ligação do autor no rodapé (TROM — projeto trade-free) já está traduzida em todos os idiomas.
 ### 2026-10-19 (v4.7.1)
 - Todo o conteúdo longo (cerca de 400 blocos de guia, códigos Q, abreviaturas, glossário, prefixos, as 82 perguntas do questionário com explicações) está traduzido para en, fr, it, es, pt, de, hu; a interface da aplicação já não é só em romeno. Corrigido: as palavras alemãs longas já não transbordam dos títulos a 390 px.
 

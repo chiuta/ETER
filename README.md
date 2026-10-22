@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.7.2 · **Last updated:** 2026-10-19
+**Version:** 4.7.3 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -92,6 +92,7 @@ Audit: 2026-10-10 — verified: 0 JS errors; the only `fetch` calls are to its o
 
 ## History / Changelog
 
+- 4.7.3 — 2026-10-22: **fix**: the author link in the footer (TROM — trade-free project) is now translated in every language.
 ### 2026-10-19 (v4.7.1)
 - All the long content (about 400 guide blocks, Q codes, abbreviations, glossary, prefixes, the 82 quiz questions with explanations) translated into en, fr, it, es, pt, de, hu; the app's interface is no longer only Romanian. Fix: long German words no longer overflow the headings at 390 px.
 

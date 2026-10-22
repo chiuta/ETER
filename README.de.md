@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 4.7.2 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 4.7.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -92,6 +92,7 @@ Audit: 2026-10-10 — geprüft: 0 JS-Fehler; die einzigen `fetch`-Aufrufe gehen 
 
 ## Verlauf / Changelog
 
+- 4.7.3 — 2026-10-22: **Korrektur**: der Autorenlink in der Fußzeile (TROM — ein Trade-Free-Projekt) ist jetzt in alle Sprachen übersetzt.
 ### 2026-10-19 (v4.7.1)
 - Der gesamte lange Inhalt (rund 400 Leitfadenblöcke, Q-Gruppen, Abkürzungen, Glossar, Präfixe, die 82 Quizfragen mit Erklärungen) ist nach en, fr, it, es, pt, de, hu übersetzt; die Oberfläche der App ist nicht mehr nur auf Rumänisch. Behoben: Lange deutsche Wörter laufen bei 390 px nicht mehr aus den Überschriften.
 
