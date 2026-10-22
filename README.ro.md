@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 4.7.3 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 4.7.4 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -92,6 +92,7 @@ Audit: 2026-10-10 — verificat: 0 erori JS; singurele `fetch` sunt către propr
 
 ## Istoric / Changelog
 
+- 4.7.4 — 2026-10-22: Mobil: tot textul are minimum 12 px (era 10-11,5 px în peste 150 de locuri); linkurile din subsol și comutatoarele „versiuni mai vechi” au o zonă de atingere mai mare.
 - 4.7.3 — 2026-10-22: **remediere**: legătura autorului din subsol (TROM — proiect trade-free) este acum tradusă în toate limbile.
 ### 2026-10-19 (v4.7.1)
 - Tot conținutul lung (circa 400 de blocuri de ghid, coduri Q, abrevieri, glosar, prefixe, cele 82 de întrebări de quiz cu explicații) este tradus în en, fr, it, es, pt, de, hu; interfața aplicației nu mai este doar în română. Corectat: cuvintele germane lungi nu mai depășesc titlurile la 390 px.

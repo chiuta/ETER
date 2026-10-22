@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 4.7.3 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 4.7.4 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -92,6 +92,7 @@ Audit: 2026-10-10 — verificato: 0 errori JS; gli unici `fetch` sono verso il p
 
 ## Cronologia / Changelog
 
+- 4.7.4 — 2026-10-22: Mobile: tutto il testo arriva ad almeno 12 px (era 10-11,5 px in oltre 150 punti); i link del piè di pagina e gli interruttori «versioni precedenti» hanno un'area di tocco più grande.
 - 4.7.3 — 2026-10-22: **correzione**: il link dell’autore nel piè di pagina (TROM — progetto trade-free) è ora tradotto in tutte le lingue.
 ### 2026-10-19 (v4.7.1)
 - Tutto il contenuto lungo (circa 400 blocchi di guida, codici Q, abbreviazioni, glossario, prefissi, le 82 domande del quiz con spiegazioni) è tradotto in en, fr, it, es, pt, de, hu; l'interfaccia dell'app non è più solo in rumeno. Corretto: le lunghe parole tedesche non escono più dai titoli a 390 px.
