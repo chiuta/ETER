@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 4.7.5 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 4.7.6 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -91,6 +91,10 @@ ETER è un'enciclopedia radioamatoriale in 8 lingue, in un unico file (19 sezion
 Audit: 2026-10-10 — verificato: 0 errori JS; gli unici `fetch` sono verso il proprio file (`location.href`); non c'è `localStorage`/`sessionStorage`/IndexedDB nel codice, come afferma il README. Corretto il contrasto dei colori «attenuati» (temi notte e giorno). L'app non ha meta CSP. Il contenuto sull'esame ANCOM è un riepilogo didattico che rimanda alla Decisione ANCOM n. 245/2017 come fonte ufficiale; gli attestati/microcredenziali generati non sono riconosciuti dall'ANCOM né da alcuna autorità (precisato nell'app, §17).
 
 ## Cronologia / Changelog
+
+### 4.7.6 — 2026-10-22
+
+fff-kit 1.1.4: aree tattili e testo minimo. Aree tattili/testo corretti nell’app.
 
 ### 4.7.5 — 2026-10-22
 

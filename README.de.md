@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 4.7.5 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 4.7.6 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -91,6 +91,10 @@ ETER ist eine 8-sprachige Amateurfunk-Enzyklopädie in einer einzigen Datei (19 
 Audit: 2026-10-10 — geprüft: 0 JS-Fehler; die einzigen `fetch`-Aufrufe gehen an die eigene Datei (`location.href`); im Code gibt es kein `localStorage`/`sessionStorage`/IndexedDB, wie die README erklärt. Der Kontrast der „abgeblendeten“ Farben wurde korrigiert (Nacht- und Tagdesign). Die App hat kein CSP-Meta. Der Inhalt zur ANCOM-Prüfung ist eine didaktische Zusammenfassung, die auf die ANCOM-Entscheidung Nr. 245/2017 als offizielle Quelle verweist; die erzeugten Zertifikate/Micro-Credentials werden weder von der ANCOM noch von irgendeiner Behörde anerkannt (in der App präzisiert, §17).
 
 ## Verlauf / Changelog
+
+### 4.7.6 — 2026-10-22
+
+fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße. Touch-Ziele/Text in der App korrigiert.
 
 ### 4.7.5 — 2026-10-22
 
