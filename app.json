@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "eter",
   "name": "ETER — Enciclopedia radioamatorului",
-  "version": "4.7.9",
+  "version": "5.0.0",
   "updated": "2026-10-26",
   "description": "Ghid complet, off-line, despre radioamatorism: coduri Q, Morse, benzi, antene, propagare, indicative, licențiere ANCOM și multe altele.",
   "egress": [],
@@ -19,8 +19,8 @@
   "storageKeys": [
     "eter-lang"
   ],
-  "sizeBytes": 1607217,
-  "sha256": "f42e0cc293d0d1b33eb300174a7f0449da906f8ccb74d723f4dbebc7f74eff2c",
+  "sizeBytes": 1660829,
+  "sha256": "1d737a246eda896323ad4d89ff3a0c2a2582ca972c0773ffcc8ac11d9c562df1",
   "csp": {
     "present": true,
     "directives": {

@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 4.7.9 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 5.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -31,6 +31,13 @@ Unelte verificate în cod / interfață:
 - Mod zi / noapte, printarea secțiunii curente, mod exersare pe ecran complet, butoane „copiază".
 - „Verifică integritatea fișierului" (SHA-256) și „Din ce e făcut fișierul".
 - „Raportează o eroare": deschide formularul GitHub Issues.
+
+## Funcții noi (v5.0.0, 26 octombrie 2026)
+
+### Simulator pe traseu (§7 Propagare)
+- Introduci două locatoare Maidenhead (4 sau 6 caractere), data și ora UTC: aplicația calculează distanța, azimutul pe calea scurtă și pe cea lungă, elevația Soarelui la ambele capete și numărul estimat de salturi ionosferice (câte unul la fiecare 3800 km), apoi afișează un tabel de favorabilitate orientativă (0–100) pe 24 de ore × 5 benzi HF, cu cea mai bună oră UTC pe bandă.
+- **Model simplificat, nu prognoză**: folosește aceleași tendințe de manual ca simulatorul didactic existent, ponderate cu elevația Soarelui în punctele de reflexie. Nu cunoaște fluxul solar real, indexul K, sporadic E sau absorbția reală; nu desenează hartă (nu există date geografice offline).
+- Secțiunea VHF/UHF: orizont radio (k=4/3), pierdere în spațiu liber, raza primei zone Fresnel, bombarea Pământului, plus profil de teren introdus de tine („km; altitudine”) cu verdict liber/marginal/blocat și grafic. Nu ia în calcul clădiri, vegetație, difracție sau ducting.
 
 ## Funcții noi (v4.5.0, 14 octombrie 2026)
 

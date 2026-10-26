@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.7.9 · **Last updated:** 2026-10-26
+**Version:** 5.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -31,6 +31,13 @@ Tools verified in the code / interface:
 - Day / night mode, printing of the current section, full-screen practice mode, "copy" buttons.
 - "Verify file integrity" (SHA-256) and "What the file is made of".
 - "Report an error": opens the GitHub Issues form.
+
+## New features (v5.0.0, 26 October 2026)
+
+### Path simulator (§7 Propagation)
+- Enter two Maidenhead locators (4 or 6 characters), the date and the UTC hour: the app computes the distance, the short-path and long-path bearings, the Sun's elevation at both ends and the estimated number of ionospheric hops (one per 3800 km), then shows an indicative favourability table (0–100) for 24 hours × 5 HF bands, with the best UTC hour per band.
+- **Simplified model, not a forecast**: it uses the same textbook trends as the existing didactic simulator, weighted by the Sun's elevation at the reflection points. It knows nothing about real solar flux, the K index, sporadic E or actual absorption; it draws no map (no offline geographic data).
+- VHF/UHF section: radio horizon (k=4/3), free-space loss, first Fresnel zone radius, Earth bulge, plus a terrain profile you enter ("km; altitude") with a clear/marginal/blocked verdict and a chart. It ignores buildings, vegetation, diffraction and ducting.
 
 ## New features (v4.5.0, 14 October 2026)
 
