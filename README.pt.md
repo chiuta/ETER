@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 5.1.0 · **Última atualização:** 2026-10-27
+**Versão:** 5.2.0 · **Última atualização:** 2026-10-27
 
 **Estado:** estável · **Offline:** completo
 
@@ -132,3 +132,7 @@ fff-kit 1.1.2: PBKDF2 com 600.000 iterações, proteção anti-clickjacking.
 - As etiquetas das tabelas deslizantes são únicas (landmark-unique).
 - Adicionada uma CSP rigorosa (`default-src 'none'`).
 - O conteúdo da ANCOM (números, sessões de exame, Decisão 245/2017) NÃO foi reverificado a 11.10.2026: continua expressamente assinalado como «verificado a 2026-08-05»; confirma em ancom.ro.
+
+## Novidades da 5.2.0 (27 de outubro de 2026): esclarecimentos sobre ligações e vibração
+
+Tradução automática, não verificada por um falante nativo. As ligações às apps irmãs (INDICATIV, QSO) abrem num novo separador apenas ao clicar; a própria app não faz pedidos de rede. Os endereços não puderam ser verificados a partir do ambiente de desenvolvimento (rede bloqueada). O Morse por vibração só aparece onde o navegador expõe a API de vibração (normalmente Android + Chrome; não iPhone/iPad) e não foi testado em telemóveis reais. Não há troca de dados entre apps: contradiria «sem servidor, sem conta».
