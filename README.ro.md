@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 5.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 5.1.0 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -31,6 +33,12 @@ Unelte verificate în cod / interfață:
 - Mod zi / noapte, printarea secțiunii curente, mod exersare pe ecran complet, butoane „copiază".
 - „Verifică integritatea fișierului" (SHA-256) și „Din ce e făcut fișierul".
 - „Raportează o eroare": deschide formularul GitHub Issues.
+
+## Nou în 5.1.0 (27 octombrie 2026): „ecosistem” radio și note despre vibrația Morse
+
+- **Legături către aplicațiile surori** (independente, offline, cu date separate; între ele nu se partajează nimic): un bloc scurt „Ecosistemul radio fără frontiere” pe pagina Acasă, plus rânduri „vezi și” în §13 (QSL & jurnal de trafic → **QSO**, jurnal de stație neoficial cu import/export ADIF 3.1) și §17 (Test de cunoștințe → **INDICATIV**, antrenor neoficial pentru examenul ANCOM). Linkurile se deschid într-o filă nouă doar la clic; aplicația în sine nu face nicio cerere de rețea. Adresele folosite (luate din README-urile celorlalte aplicații / din catalogul autorului, **neverificate de aici**): `https://chiuta.github.io/INDICATIV/` și `https://chiuta.github.io/apps/QSO/`.
+- **Morse prin vibrație** exista deja (bifa „📳 vibrează” de lângă „Redă audio” în §4: textul tradus și rundele antrenorului Koch sunt redate și ca pulsuri de vibrație). Nou în 5.1.0: o notă vizibilă că apare doar unde browserul expune API-ul Vibration (de obicei Android + Chrome; **nu iPhone/iPad**). Netestat de mine pe telefoane reale.
+- Textele sunt traduse în cele 8 limbi (automat, neverificat nativ).
 
 ## Funcții noi (v5.0.0, 26 octombrie 2026)
 
