@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 5.0.0 · **Last updated:** 2026-10-26
+**Version:** 5.1.0 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -31,6 +33,12 @@ Tools verified in the code / interface:
 - Day / night mode, printing of the current section, full-screen practice mode, "copy" buttons.
 - "Verify file integrity" (SHA-256) and "What the file is made of".
 - "Report an error": opens the GitHub Issues form.
+
+## New in 5.1.0 (27 October 2026): a radio "ecosystem" and Morse vibration notes
+
+- **Links to the sister apps** (independent, offline, separate data; nothing is shared between them): a short "The borderless radio ecosystem" block on the Home page, plus "see also" lines in §13 (QSL & traffic log → **QSO**, an unofficial station log with ADIF 3.1 import/export) and §17 (Knowledge test → **INDICATIV**, an unofficial trainer for the ANCOM exam). The links open in a new tab only on click; the app itself still makes no network request. Addresses used (taken from the other apps' own READMEs / the author's catalogue, **not verified from here**): `https://chiuta.github.io/INDICATIV/` and `https://chiuta.github.io/apps/QSO/`.
+- **Morse by vibration** already existed (tick "📳 vibrează" next to "Play audio" in §4: the translated text, and the Koch trainer rounds, are also played as vibration pulses). New in 5.1.0: a visible note that it appears only where the browser exposes the Vibration API (usually Android + Chrome; **not iPhone/iPad**). Not tested by me on real phones.
+- Texts translated into the 8 languages (automatic, not checked by native speakers).
 
 ## New features (v5.0.0, 26 October 2026)
 
