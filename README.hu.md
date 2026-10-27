@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 5.1.0 · **Utolsó frissítés:** 2026-10-27
+**Verzió:** 5.2.0 · **Utolsó frissítés:** 2026-10-27
 
 **Állapot:** stabil · **Offline:** teljes
 
@@ -131,3 +131,7 @@ fff-kit 1.1.2: PBKDF2 600 000 iterációval, clickjacking elleni védelem.
 - A görgethető táblázatok címkéi egyediek (landmark-unique).
 - Szigorú CSP hozzáadva (`default-src 'none'`).
 - Az ANCOM-tartalmat (számadatok, vizsgaidőszakok, a 245/2017. sz. határozat) 2026. 10. 11-én NEM ellenőrizték újra: továbbra is kifejezetten „2026-08-05-én ellenőrizve” jelölést visel; ellenőrizd az ancom.ro oldalon.
+
+## Újdonságok az 5.2.0-ban (2026. október 27.): pontosítások a hivatkozásokról és a rezgésről
+
+Gépi fordítás, anyanyelvi beszélő nem ellenőrizte. A testvéralkalmazásokra (INDICATIV, QSO) mutató hivatkozások csak kattintásra, új lapon nyílnak meg; maga az alkalmazás nem küld hálózati kérést. A címeket a fejlesztői környezetből nem lehetett ellenőrizni (a hálózat tiltott). A rezgéses Morse csak ott jelenik meg, ahol a böngésző kínálja a Vibration API-t (általában Android + Chrome; iPhone/iPad nem), és valódi telefonon nem tesztelték. Az alkalmazások között nincs adatcsere: ellentmondana a „szerver és fiók nélkül” elvnek.

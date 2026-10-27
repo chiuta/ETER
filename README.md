@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 5.1.0 · **Last updated:** 2026-10-27
+**Version:** 5.2.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete
 
@@ -145,3 +145,7 @@ fff-kit 1.1.2: PBKDF2 with 600,000 iterations, anti-clickjacking protection.
 - The labels of scrollable tables are unique (landmark-unique).
 - Added a strict CSP (`default-src 'none'`).
 - The ANCOM content (figures, exam sessions, Decision 245/2017) was NOT re-verified on 11.10.2026: it remains explicitly marked "verified on 2026-08-05"; check ancom.ro.
+
+## New in 5.2.0 (27 October 2026): audit of external links
+
+Added `tests/links.test.mjs`, a static audit: every external link opens only on click, in a new tab with `rel=noopener`; no script calls `fetch`/`XMLHttpRequest`/`sendBeacon` to http(s); the CSP stays `default-src 'none'`. The addresses of the sister apps are still **not verified** from the sandbox (network blocked). Data sharing between apps is deliberately **not** implemented (it would contradict "no server, no account"). The 6 other README languages got a short automatic translation of this note.

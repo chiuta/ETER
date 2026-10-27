@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 5.1.0 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 5.2.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet
 
@@ -145,3 +145,7 @@ fff-kit 1.1.2: PBKDF2 600 000 iterații, protecție anti-clickjacking.
 - Etichetele tabelelor derulabile sunt unice (landmark-unique).
 - Adăugat CSP strict (`default-src 'none'`).
 - Conținutul ANCOM (cifre, sesiuni de examen, Decizia 245/2017) NU a fost re-verificat la 11.10.2026: rămâne marcat explicit „verificat la 2026-08-05”; verifică pe ancom.ro.
+
+## Nou în 5.2.0 (27 octombrie 2026): audit al legăturilor externe
+
+Am adăugat `tests/links.test.mjs`, un audit static: orice legătură externă se deschide doar la clic, în filă nouă cu `rel=noopener`; niciun script nu apelează `fetch`/`XMLHttpRequest`/`sendBeacon` către http(s); CSP rămâne `default-src 'none'`. Adresele aplicațiilor surori **rămân neverificate** din sandbox (rețea blocată). Partajarea de date între aplicații **nu** este implementată, intenționat (ar contrazice „fără server, fără cont”). Celelalte 6 limbi ale README au o scurtă traducere automată a acestei note.
