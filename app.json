@@ -19,8 +19,8 @@
   "storageKeys": [
     "eter-lang"
   ],
-  "sizeBytes": 1688506,
-  "sha256": "b54b9e77efa846404bdcf82dda8144bc516113c3fac04fa700c4b902c9724b28",
+  "sizeBytes": 1688592,
+  "sha256": "7721b08bab052fb05046e17951aa1e5e8154f720ca5b6e98ec9ae2146695640f",
   "csp": {
     "present": true,
     "directives": {
