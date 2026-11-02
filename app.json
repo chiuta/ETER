@@ -19,8 +19,8 @@
   "storageKeys": [
     "eter-lang"
   ],
-  "sizeBytes": 1688592,
-  "sha256": "7721b08bab052fb05046e17951aa1e5e8154f720ca5b6e98ec9ae2146695640f",
+  "sizeBytes": 1829026,
+  "sha256": "78505343fe7dd02ab4fb65141606582f3a392e04342a8ccd5c470297b93f00a8",
   "csp": {
     "present": true,
     "directives": {
@@ -61,6 +61,10 @@
       "dialog",
       "label",
       "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history",
       "bridge"
     ]
   },
@@ -72,6 +76,10 @@
       "dialog",
       "label",
       "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history",
       "bridge"
     ]
   },
