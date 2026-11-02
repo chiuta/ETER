@@ -1,5 +1,9 @@
 # Jurnal de modificări — ETER
 
+## 5.3.0 — 2026-11-01
+
+Nou: «Trimite la…» (fff-kit, modulul FFF.bridge) — testul de cunoștințe poate fi trimis către Undava ca quiz (plic .fff.json, cu confirmare înainte de import). Fără rețea, fără telemetrie.
+
 ## 5.2.0 — 2026-10-27 (anterior: 5.1.0)
 - Test nou `tests/links.test.mjs` (audit static): toate legăturile externe se deschid doar la clic, în filă nouă, cu `rel=noopener`; niciun script nu face cereri http(s); CSP strict păstrat.
 - README: notă scurtă în cele 6 limbi rămase (traducere automată, neverificată nativ) despre legături, vibrația Morse și lipsa partajării de date.
