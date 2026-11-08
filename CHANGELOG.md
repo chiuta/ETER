@@ -1,5 +1,8 @@
 # Jurnal de modificări — ETER
 
+## 5.3.5 — 2026-11-08
+Calculatorul de lungimi: exemplu rezolvat sub tabel («Dipol λ/2 la 14,200 MHz: 142,65 / 14,2 ≈ 10,05 m în total, ≈ 5,02 m pe fiecare braț»), tradus în 8 limbi (2 chei noi în dicționarul i18n). Unitatea (m) era deja afișată în fiecare rezultat.
+
 ## 5.3.2 — 2026-11-03
 
 Destinații «Trimite către…» pentru pașaportul de învățare: adăugate FENARIUM și MENSURA (registrul de aplicații-țintă reinjectat din hub).
