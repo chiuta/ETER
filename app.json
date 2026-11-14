@@ -15,18 +15,19 @@
     "serviceWorker",
     "localStorage",
     "Web Crypto",
+    "WebGL",
     "BroadcastChannel"
   ],
   "storageKeys": [
     "eter-lang"
   ],
-  "sizeBytes": 1960662,
-  "sha256": "9afaae31bf8ccb19df370c016f2ccf53a4157165ccfba6793909bb8cf423b5d2",
+  "sizeBytes": 2012303,
+  "sha256": "6d30dd059ef4655f82daaecb7b2001915f5b8beb3876a36580b5b84f7ed739a1",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×10",
+      "script-src": "sha256×11",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data: blob:",
       "media-src": "'self' data: blob:",
