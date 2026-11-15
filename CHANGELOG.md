@@ -1,5 +1,9 @@
 # Jurnal de modificări — ETER
 
+## 5.3.10 — 2026-11-15
+
+- Nou: texturi fractale hiper-detaliate (fff-texturi 1.1.2) — fundalul și suprafețele mari (carduri, panouri, antete, butoane; filele și dialogurile ascunse la încărcare, când se deschid) primesc un material generat local (WebGL2, fără rețea și fără imagini), care se repetă fără cusătură; culorile aplicației rămân ale ei. Se oprește din dialogul „Transparență” sau cu `?notex=1`.
+
 ## 5.3.5 — 2026-11-08
 Calculatorul de lungimi: exemplu rezolvat sub tabel («Dipol λ/2 la 14,200 MHz: 142,65 / 14,2 ≈ 10,05 m în total, ≈ 5,02 m pe fiecare braț»), tradus în 8 limbi (2 chei noi în dicționarul i18n). Unitatea (m) era deja afișată în fiecare rezultat.
 
