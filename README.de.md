@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 5.4.3 · **Zuletzt aktualisiert:** 2026-11-20
+**Version:** 5.4.3 · **Zuletzt aktualisiert:** 2026-11-22
 
 **Status:** stabil · **Offline:** vollständig
 
@@ -16,7 +16,7 @@ Vollständiger Leitfaden zum Amateurfunk in einer einzigen HTML-Datei: Q-Gruppen
 
 ## Was es ist
 
-ETER ist eine interaktive Enzyklopädie des Funkamateurs (in der App angezeigte Version: v4.7.2, aktualisiert am 2026-10-19; die Zahlen und Vorschriften bleiben die am 2026-08-05 überprüften), gegliedert in 19 nummerierte Abschnitte §0–§18. Der Text in der App beschreibt sie als „ohne Server, ohne Cloud, ohne Konto“, und der Inhalt wird aus derselben HTML-Datei geladen.
+ETER ist eine interaktive Enzyklopädie des Funkamateurs (in der App angezeigte Version: v4.7.2, aktualisiert am 2026-11-22; die Zahlen und Vorschriften bleiben die am 2026-11-22 überprüften), gegliedert in 19 nummerierte Abschnitte §0–§18. Der Text in der App beschreibt sie als „ohne Server, ohne Cloud, ohne Konto“, und der Inhalt wird aus derselben HTML-Datei geladen.
 
 **Sprachen:** die Abschnitte des Leitfadens (rund 400 Blöcke), die Q-Gruppen, die Abkürzungen, das Glossar, die Rufzeichenpräfixe und der Fragenkatalog mit Optionen und Erklärungen liegen in den 8 Sprachen vor; Eigennamen, Rufzeichen, Q-Gruppen und Abkürzungen als Symbole, Formeln, Morsezeichen, Namen von Contesten/Diplomen/Diensten, URLs und der Text der alten Versionsverlaufseinträge (v1.0–v4.0, auf Rumänisch) bleiben unverändert. Die Übersetzungen sind automatisch und nicht von Muttersprachlern geprüft; der Abschnitt „Funkamateur YO werden“ (ANCOM-Verfahren, Klassen, Beschluss 245/2017, Fristen, Gebühren), die Quizfragen zu den Vorschriften, der Abschnitt zu Notfunk und Gemeinwohl (ARES/RACES, Relais, NVIS) und die Sicherheitsinhalte (Antennen/HF, Dummy Load, Höchstleistung) **müssen fachlich bzw. juristisch geprüft werden**.
 

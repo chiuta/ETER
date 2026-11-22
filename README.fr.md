@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 5.4.3 · **Dernière mise à jour :** 2026-11-20
+**Version :** 5.4.3 · **Dernière mise à jour :** 2026-11-22
 
 **État :** stable · **Hors ligne :** complet
 
@@ -16,7 +16,7 @@ Guide complet du radioamateurisme dans un seul fichier HTML : codes Q, Morse, ba
 
 ## De quoi s'agit-il
 
-ETER est une encyclopédie interactive du radioamateur (version affichée dans l'application : v4.7.2, mise à jour le 2026-10-19 ; les chiffres et les réglementations restent ceux vérifiés au 2026-08-05), organisée en 19 sections numérotées §0–§18. Le texte de l'application la décrit comme « sans serveur, sans cloud, sans compte », et le contenu se charge depuis le même fichier HTML.
+ETER est une encyclopédie interactive du radioamateur (version affichée dans l'application : v4.7.2, mise à jour le 2026-11-22 ; les chiffres et les réglementations restent ceux vérifiés au 2026-11-22), organisée en 19 sections numérotées §0–§18. Le texte de l'application la décrit comme « sans serveur, sans cloud, sans compte », et le contenu se charge depuis le même fichier HTML.
 
 **Langues :** les sections du guide (environ 400 blocs), les codes Q, les abréviations, le glossaire, les préfixes d'indicatifs et la banque de questions avec options et explications sont disponibles dans les 8 langues ; les noms propres, les indicatifs, les codes Q et abréviations comme symboles, les formules, les symboles Morse, les noms de concours/diplômes/services, les URL et le corps des anciennes entrées de l'historique (v1.0–v4.0, en roumain) restent tels quels. Les traductions sont automatiques, non vérifiées par des locuteurs natifs ; la section « Devenir radioamateur YO » (procédure ANCOM, classes, décision 245/2017, délais, taxes), les questions de quiz sur la réglementation, la section urgences et utilité publique (ARES/RACES, relais, NVIS) et le contenu de sécurité (antennes/RF, charge fictive, puissance maximale) **doivent être relus par un spécialiste ou un juriste**.
 
